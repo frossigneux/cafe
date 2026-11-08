@@ -10,9 +10,9 @@ Two files in this folder control what the website shows:
 
 ## Easiest: Pages CMS
 
-Open [app.pagescms.org](https://app.pagescms.org), sign in and choose the **cafe** project. **Menu** and **Settings** open as forms: fill in the fields, add photos from your phone or computer, then click **Save**. The site updates by itself within about 2 minutes, exactly as with an edit on GitHub (below), and the same safety net applies.
+Open [app.pagescms.org](https://app.pagescms.org), sign in and choose the **cafe** project. **მენიუ · Menu** and **პარამეტრები · Settings** open as forms, labelled in Georgian and English: fill in the fields, add photos from your phone or computer, then click **Save**. The site updates by itself within about 2 minutes, exactly as with an edit on GitHub (below), and the same safety net applies.
 
-In the menu, each dish has a **Available** switch (off = greyed out, temporarily unavailable) and a **Hidden** switch (on = removed from the site, kept in the list for later). Leave **Promo price** empty when there is no promo.
+In the menu, each dish has an **Available** (ხელმისაწვდომია) switch (off = greyed out, temporarily unavailable) and a **Hidden** (დამალული) switch (on = removed from the site, kept in the list for later). Leave **Promo price** (აქციის ფასი) empty when there is no promo.
 
 The rest of this page explains the same files for editing them directly on GitHub.
 
