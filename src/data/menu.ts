@@ -1,6 +1,6 @@
 import raw from '../../content/menu.json';
 import { langs } from '../i18n';
-import { check, text, type Text } from './validate';
+import { blank, blankText, check, photoFile, text, type Text } from './validate';
 
 // The menu lives in content/menu.json so the café can edit it on GitHub.
 // Anything malformed stops the build with a message naming the item and the field,
@@ -48,7 +48,7 @@ function load(data: unknown): Category[] {
     const where = `category ${ci + 1}`;
     const name = text(c.name, file, `${where} → "name"`);
     const id = uniqueId(typeof c.id === 'string' && c.id ? c.id : slug(name.en), where);
-    check(c.orderable === undefined || typeof c.orderable === 'boolean', file, `${where} ("${name.en}") → "orderable" must be true or false, without quotes`);
+    check(blank(c.orderable) || typeof c.orderable === 'boolean', file, `${where} ("${name.en}") → "orderable" must be true or false, without quotes`);
     check(Array.isArray(c.items), file, `${where} ("${name.en}") → "items" must be a list`);
 
     // "hidden": true removes an item from the site for good but keeps it in the file;
@@ -59,27 +59,28 @@ function load(data: unknown): Category[] {
         const itemName = text(i.name, file, `${at} → "name"`);
         const label = `${at} ("${itemName.en}")`;
         check(typeof i.price === 'number' && i.price > 0, file, `${label} → "price" must be a number above 0, without quotes or ₾, e.g. 15 or 15.5`);
+        const promo = blank(i.promoPrice) ? undefined : i.promoPrice;
         check(
-          i.promoPrice === undefined || (typeof i.promoPrice === 'number' && i.promoPrice > 0 && i.promoPrice < (i.price as number)),
+          promo === undefined || (typeof promo === 'number' && promo > 0 && promo < (i.price as number)),
           file,
           `${label} → "promoPrice" must be a number lower than "price", without quotes (remove the line to end the promo)`,
         );
         check(
-          i.photo === undefined || (typeof i.photo === 'string' && /^[\w.-]+\.(jpe?g|png|webp)$/i.test(i.photo)),
+          blank(i.photo) || photoFile(i.photo),
           file,
           `${label} → "photo" must be a file name from content/photos/, e.g. "pepperoni.jpg"`,
         );
-        check(i.available === undefined || typeof i.available === 'boolean', file, `${label} → "available" must be true or false, without quotes`);
-        check(i.hidden === undefined || typeof i.hidden === 'boolean', file, `${label} → "hidden" must be true or false, without quotes`);
+        check(blank(i.available) || typeof i.available === 'boolean', file, `${label} → "available" must be true or false, without quotes`);
+        check(blank(i.hidden) || typeof i.hidden === 'boolean', file, `${label} → "hidden" must be true or false, without quotes`);
         if (i.hidden === true) return null;
         return {
           id: uniqueId(typeof i.id === 'string' && i.id ? i.id : slug(itemName.en), label),
           name: itemName,
-          desc: i.description === undefined ? Object.fromEntries(langs.map((l) => [l, ''])) as Text : text(i.description, file, `${label} → "description"`),
-          price: (i.promoPrice ?? i.price) as number,
-          ...(i.promoPrice !== undefined && { regularPrice: i.price as number }),
+          desc: blankText(i.description) ? Object.fromEntries(langs.map((l) => [l, ''])) as Text : text(i.description, file, `${label} → "description"`),
+          price: (promo ?? i.price) as number,
+          ...(promo !== undefined && { regularPrice: i.price as number }),
           available: i.available !== false,
-          ...(i.photo !== undefined && { photo: i.photo as string }),
+          ...(!blank(i.photo) && { photo: photoFile(i.photo)! }),
         };
       })
       .filter((i): i is Item => i !== null);

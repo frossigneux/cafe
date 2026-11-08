@@ -5,7 +5,16 @@ Two files in this folder control what the website shows:
 | File | What it holds |
 |---|---|
 | [`menu.json`](menu.json) | Categories, pizzas, drinks, descriptions and prices |
-| [`settings.json`](settings.json) | Name, WhatsApp number, opening hours, address, map location, bank accounts |
+| [`settings.json`](settings.json) | Name, pictures at the top, WhatsApp number, opening hours, address, map location, bank accounts |
+| [`photos/`](photos) | Every picture: dishes and the pictures at the top |
+
+## Easiest: Pages CMS
+
+Open [app.pagescms.org](https://app.pagescms.org), sign in and choose the **cafe** project. **Menu** and **Settings** open as forms: fill in the fields, add photos from your phone or computer, then click **Save**. The site updates by itself within about 2 minutes, exactly as with an edit on GitHub (below), and the same safety net applies.
+
+In the menu, each dish has a **Available** switch (off = greyed out, temporarily unavailable) and a **Hidden** switch (on = removed from the site, kept in the list for later). Leave **Promo price** empty when there is no promo.
+
+The rest of this page explains the same files for editing them directly on GitHub.
 
 ## How to edit on GitHub
 
@@ -48,7 +57,7 @@ If you made a mistake, a red cross appears instead. Click it, then **Details**: 
 
 **Show a category without online ordering** (e.g. coffee and tea, served at the café only). Add `"orderable": false` to the category, next to its `"name"`. Its items show with their price but no + button, under a short "served at the café only" note. Leave it out for categories that can be ordered.
 
-**Add a dish photo.** Upload the picture to the [`photos`](photos) folder (Add file → Upload files), then add its file name to the item, e.g. `"photo": "pepperoni.jpg"`. Landscape photos around 600×480 work best. Remove the line to hide the photo.
+**Add a dish photo.** Upload the picture to the [`photos`](photos) folder (Add file → Upload files), then add it to the item, e.g. `"photo": "/photos/pepperoni.jpg"`. Landscape photos around 600×480 work best. Remove the line to hide the photo.
 
 **Reorder.** Items and categories appear on the site in the same order as in the file.
 
@@ -59,9 +68,9 @@ If you made a mistake, a red cross appears instead. Click it, then **Details**: 
 - `"whatsapp"`: the number that receives orders, with country code, e.g. `"+995 555 12 34 56"`.
 - `"facebook"`: link to the Facebook page, shown in the Info section. Remove the line to hide it.
 - `"location"`: the pickup point on the map, as `{ "lat": 41.91935, "lng": 44.727734 }`. In Google Maps, right-click the place and click the coordinates to copy them. Remove the line to hide the map link.
-- `"openingHours"`: one line per day (`monday` … `sunday`), 24-hour clock, Tbilisi time, e.g. `"friday": { "open": "10:00", "close": "23:00" }`. Write `"sunday": "closed"` for a day off. Closing after midnight is not supported.
+- `"openingHours"`: one line per day (`monday` … `sunday`), 24-hour clock, Tbilisi time, e.g. `"friday": { "open": "10:00", "close": "23:00" }`. For a day off, add `"closed": true` to that day (or write `"sunday": "closed"`). Closing after midnight is not supported.
 - `"bankAccounts"`: IBAN and account holder for Bank of Georgia (`bog`) and TBC (`tbc`). Spaces in the IBAN are fine.
-- `"showPhoto"`: `true` shows the café illustration at the top of the info card, `false` hides it.
+- `"gallery"`: the pictures at the top of the page, each as `{ "image": "/photos/cafe.jpg", "alt": { "ka": "…", "en": "…", "ru": "…" } }`. The first one shows first (and on links shared on social networks), the others when swiping. `"alt"` describes the picture for blind visitors. An empty list `[]` shows no picture.
 
 ## Rules of JSON, in short
 

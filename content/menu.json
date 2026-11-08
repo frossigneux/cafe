@@ -19,7 +19,7 @@
             "ru": "моцарелла, пепперони, соус для пиццы"
           },
           "price": 22,
-          "photo": "pepperoni.jpg"
+          "photo": "/photos/pepperoni.jpg"
         },
         {
           "name": {
@@ -46,7 +46,7 @@
             "ru": "соус для пиццы, моцарелла; четыре части: пепперони, ветчина и халапеньо, салат и черри, грибы и болгарский перец"
           },
           "price": 26,
-          "photo": "four-seasons.jpg"
+          "photo": "/photos/four-seasons.jpg"
         },
         {
           "name": {
@@ -73,7 +73,7 @@
             "ru": "соус для пиццы, моцарелла, куриное филе, листья салата, пармезан, черри"
           },
           "price": 25,
-          "photo": "caesar-pizza.jpg"
+          "photo": "/photos/caesar-pizza.jpg"
         },
         {
           "name": {
@@ -90,7 +90,7 @@
             "ru": "Вегетарианская пицца"
           },
           "price": 24,
-          "photo": "vegetarian.jpg"
+          "photo": "/photos/vegetarian.jpg"
         },
         {
           "name": {
@@ -99,7 +99,7 @@
             "ru": "Пицца с беконом"
           },
           "price": 25,
-          "photo": "bacon.jpg"
+          "photo": "/photos/bacon.jpg"
         },
         {
           "name": {
@@ -108,7 +108,7 @@
             "ru": "Пицца Барбекю"
           },
           "price": 25,
-          "photo": "bbq.jpg"
+          "photo": "/photos/bbq.jpg"
         },
         {
           "name": {
@@ -117,7 +117,7 @@
             "ru": "Пицца «Фунги прошутто»"
           },
           "price": 24,
-          "photo": "funghi-prosciutto.jpg"
+          "photo": "/photos/funghi-prosciutto.jpg"
         }
       ]
     },
@@ -140,7 +140,7 @@
             "ru": "Цена за штуку"
           },
           "price": 2,
-          "photo": "khinkali.jpg"
+          "photo": "/photos/khinkali.jpg"
         },
         {
           "name": {
@@ -154,7 +154,7 @@
             "ru": "Цена за штуку"
           },
           "price": 1.7,
-          "photo": "khinkali.jpg"
+          "photo": "/photos/khinkali.jpg"
         },
         {
           "name": {
@@ -168,7 +168,7 @@
             "ru": "Цена за штуку"
           },
           "price": 1.7,
-          "photo": "khinkali.jpg"
+          "photo": "/photos/khinkali.jpg"
         },
         {
           "name": {
@@ -182,7 +182,7 @@
             "ru": "Цена за штуку"
           },
           "price": 1.5,
-          "photo": "khinkali.jpg"
+          "photo": "/photos/khinkali.jpg"
         }
       ]
     },
@@ -200,7 +200,7 @@
             "ru": "Аджарский хачапури"
           },
           "price": 18,
-          "photo": "adjarian.jpg"
+          "photo": "/photos/adjarian.jpg"
         },
         {
           "name": {
@@ -209,7 +209,7 @@
             "ru": "Имеретинский хачапури"
           },
           "price": 18,
-          "photo": "imeretian.jpg"
+          "photo": "/photos/imeretian.jpg"
         },
         {
           "name": {
@@ -218,7 +218,7 @@
             "ru": "Мегрельский хачапури"
           },
           "price": 20,
-          "photo": "megrelian.jpg"
+          "photo": "/photos/megrelian.jpg"
         },
         {
           "name": {
@@ -227,7 +227,7 @@
             "ru": "Слоёный хачапури"
           },
           "price": 20,
-          "photo": "puff-pastry.jpg"
+          "photo": "/photos/puff-pastry.jpg"
         },
         {
           "name": {
@@ -236,7 +236,7 @@
             "ru": "Царский хачапури"
           },
           "price": 23,
-          "photo": "royal.jpg"
+          "photo": "/photos/royal.jpg"
         },
         {
           "name": {
@@ -245,7 +245,7 @@
             "ru": "Лобиани"
           },
           "price": 15,
-          "photo": "lobiani.jpg"
+          "photo": "/photos/lobiani.jpg"
         },
         {
           "name": {
@@ -262,7 +262,7 @@
             "ru": "Чахракина"
           },
           "price": 17,
-          "photo": "chakhrakina.jpg"
+          "photo": "/photos/chakhrakina.jpg"
         },
         {
           "name": {
@@ -271,7 +271,7 @@
             "ru": "Кубдари"
           },
           "price": 20,
-          "photo": "kubdari.jpg"
+          "photo": "/photos/kubdari.jpg"
         },
         {
           "name": {
@@ -280,7 +280,7 @@
             "ru": "Гурийский пирог"
           },
           "price": 16,
-          "photo": "gurian-pie.jpg"
+          "photo": "/photos/gurian-pie.jpg"
         }
       ]
     },
@@ -298,7 +298,7 @@
             "ru": "Салат «Цезарь»"
           },
           "price": 18,
-          "photo": "caesar-salad.jpg"
+          "photo": "/photos/caesar-salad.jpg"
         },
         {
           "name": {
@@ -307,7 +307,7 @@
             "ru": "Картофель фри"
           },
           "price": 6,
-          "photo": "fries.jpg"
+          "photo": "/photos/fries.jpg"
         }
       ]
     },

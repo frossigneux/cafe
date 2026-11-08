@@ -1,0 +1,142 @@
+# Pages CMS (https://app.pagescms.org): forms for content/menu.json and content/settings.json.
+# Every save is a commit on main, which republishes the site. A mistake stops the
+# publish and the live site keeps its previous version (see content/README.md).
+
+media:
+  input: content/photos
+  output: /photos
+
+components:
+  text:
+    type: object
+    fields:
+      - { name: ka, label: Georgian, type: string }
+      - { name: en, label: English, type: string }
+      - { name: ru, label: Russian, type: string }
+  longText:
+    type: object
+    fields:
+      - { name: ka, label: Georgian, type: text }
+      - { name: en, label: English, type: text }
+      - { name: ru, label: Russian, type: text }
+  day:
+    type: object
+    fields:
+      - { name: closed, label: Closed all day, type: boolean }
+      - { name: open, label: 'Opens (24 h, e.g. 10:00)', type: string, pattern: '^(([01]\d|2[0-3]):[0-5]\d)?$' }
+      - { name: close, label: 'Closes (e.g. 22:00)', type: string, pattern: '^(([01]\d|2[0-3]):[0-5]\d)?$' }
+  bank:
+    type: object
+    fields:
+      - { name: iban, label: IBAN, type: string }
+      - { name: holder, label: Account holder, type: string }
+
+content:
+  - name: menu
+    label: Menu
+    type: file
+    path: content/menu.json
+    format: json
+    fields:
+      - name: categories
+        label: Categories
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{fields.name.en}'
+        fields:
+          - { name: name, label: Category name, component: text }
+          - name: orderable
+            label: Can be ordered online
+            description: Off for drinks served at the café only (shown for information).
+            type: boolean
+            default: true
+          - name: items
+            label: Dishes
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: '{fields.name.en} · {fields.price} ₾'
+            fields:
+              - { name: name, label: Name, component: text }
+              - { name: description, label: Description, component: longText }
+              - { name: price, label: Price (₾), type: number }
+              - name: promoPrice
+                label: Promo price (₾)
+                description: Lower than the price. Leave empty when there is no promo.
+                type: number
+              - name: photo
+                label: Photo
+                type: image
+                options:
+                  extensions: [jpg, jpeg, png, webp]
+              - name: available
+                label: Available
+                description: Off = shown greyed out as temporarily unavailable.
+                type: boolean
+                default: true
+              - name: hidden
+                label: Hidden
+                description: On = removed from the site but kept here for later.
+                type: boolean
+              - name: id
+                label: Technical id
+                description: Leave as it is.
+                type: string
+                hidden: true
+
+  - name: settings
+    label: Settings
+    type: file
+    path: content/settings.json
+    format: json
+    fields:
+      - { name: name, label: Café name, type: string, required: true }
+      - name: gallery
+        label: Pictures at the top
+        description: The first one shows first, the others when swiping. Remove all to show none.
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{fields.image}'
+        fields:
+          - name: image
+            label: Picture
+            type: image
+            options:
+              extensions: [jpg, jpeg, png, webp]
+          - { name: alt, label: Description (for blind visitors), component: text }
+      - name: whatsapp
+        label: WhatsApp number
+        description: With the country code, e.g. +995 593 62 80 90. Orders arrive here.
+        type: string
+        required: true
+      - name: openingHours
+        label: Opening hours (Tbilisi time)
+        type: object
+        fields:
+          - { name: monday, label: Monday, component: day }
+          - { name: tuesday, label: Tuesday, component: day }
+          - { name: wednesday, label: Wednesday, component: day }
+          - { name: thursday, label: Thursday, component: day }
+          - { name: friday, label: Friday, component: day }
+          - { name: saturday, label: Saturday, component: day }
+          - { name: sunday, label: Sunday, component: day }
+      - { name: address, label: Address, component: text }
+      - name: location
+        label: Map pin
+        description: From Google Maps (long-press the place, copy the two numbers).
+        type: object
+        fields:
+          - { name: lat, label: Latitude, type: number }
+          - { name: lng, label: Longitude, type: number }
+      - { name: facebook, label: Facebook page link, type: string }
+      - name: bankAccounts
+        label: Bank accounts
+        type: object
+        fields:
+          - { name: bog, label: Bank of Georgia, component: bank }
+          - { name: tbc, label: TBC Bank, component: bank }

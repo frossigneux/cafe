@@ -3,6 +3,8 @@
 Site statique Astro, en trois langues : géorgien (`/`), anglais (`/en/`) et russe (`/ru/`).
 
 - **Menu et réglages** : `content/menu.json` et `content/settings.json`. Le mode d'emploi pour l'équipe du café est dans [`content/README.md`](content/README.md), en anglais.
+- **Pages CMS** : [`.pages.yml`](.pages.yml) décrit les formulaires de [app.pagescms.org](https://app.pagescms.org) pour ces deux fichiers ; les photos envoyées vont dans `content/photos/`. Pour y accéder : se connecter avec GitHub sur app.pagescms.org et installer l'application Pages CMS sur ce dépôt. D'autres personnes peuvent ensuite être invitées depuis Pages CMS.
+- **Image de partage** (`public/og.jpg`) : recréée à chaque publication par `scripts/make-og.py` (nom du café + première image de la galerie).
 - **En local** : `npm install`, puis `npm run dev`.
 
 ## Mise en ligne actuelle : GitHub Pages
@@ -19,7 +21,7 @@ Le dépôt GitHub peut rester **privé** ; les offres gratuites de GitHub et de 
 2. Dans Cloudflare, ouvrez **Workers & Pages → Create → Pages → Connect to Git**. Autorisez l'accès à GitHub (vous pouvez le limiter à ce seul dépôt), puis choisissez le dépôt.
 3. Réglages de compilation :
    - Framework preset : **Astro**
-   - Build command : `npm run build`
+   - Build command : `pip install pillow && python3 -I scripts/make-og.py && npm run build` (le début recrée l'image de partage)
    - Build output directory : `dist`
    - Variable d'environnement : `NODE_VERSION` = `22`
 4. Chaque commit sur `main` republie le site, y compris une modification faite directement sur github.com.

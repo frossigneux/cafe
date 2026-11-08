@@ -1,0 +1,3 @@
+Noto Sans and Noto Sans Georgian, by the Noto Project Authors.
+SIL Open Font License 1.1: https://openfontlicense.org
+Used only by make-og.py to draw the social sharing image.

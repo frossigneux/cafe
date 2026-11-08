@@ -19,3 +19,18 @@ export function text(value: unknown, file: string, where: string): Text {
   check(fallback, file, `${where} needs at least one of "ka", "en" or "ru"`);
   return Object.fromEntries(langs.map((l) => [l, ((v[l] as string) || fallback).trim()])) as Text;
 }
+
+// Pages CMS writes empty fields as null or "" instead of leaving them out.
+export const blank = (v: unknown) => v === undefined || v === null || v === '';
+
+// Pages CMS stores photos as "/photos/x.jpg"; a bare "x.jpg" works too.
+// Returns the file name inside content/photos/, or null if the value is not one.
+export function photoFile(v: unknown): string | null {
+  if (typeof v !== 'string') return null;
+  const name = v.trim().replace(/^\/?(content\/)?photos\//, '');
+  return /^[\w.-]+\.(jpe?g|png|webp)$/i.test(name) ? name : null;
+}
+
+// A text left empty in every language counts as no text.
+export const blankText = (v: unknown) =>
+  blank(v) || (typeof v === 'object' && Object.values(v as object).every((s) => blank(typeof s === 'string' ? s.trim() : s)));

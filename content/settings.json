@@ -1,6 +1,23 @@
 {
   "name": "მაი & Family",
-  "showPhoto": true,
+  "gallery": [
+    {
+      "image": "/photos/illustration.jpg",
+      "alt": {
+        "ka": "კაფეს ფასადი და ტერასა ყვითელი ხის ქვეშ",
+        "en": "The café front and its terrace under a yellow tree",
+        "ru": "Фасад кафе и терраса под жёлтым деревом"
+      }
+    },
+    {
+      "image": "/photos/cafe.jpg",
+      "alt": {
+        "ka": "კაფეს დარბაზი: დახლი, ყავის აპარატი და პიცის ღუმელი",
+        "en": "Inside the café: the counter, the coffee machine and the pizza oven",
+        "ru": "Зал кафе: стойка, кофемашина и печь для пиццы"
+      }
+    }
+  ],
   "whatsapp": "+995 593 62 80 90",
   "openingHours": {
     "monday": {
