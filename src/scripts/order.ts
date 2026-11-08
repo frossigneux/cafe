@@ -445,6 +445,25 @@ clearBtn.addEventListener('click', () => {
   toggle.focus();
 });
 
+// ── Dish photo, enlarged ─────────────────────────────────
+
+const zoom = $<HTMLDialogElement>('[data-zoom-dialog]');
+const zoomImg = $<HTMLImageElement>('[data-zoom-img]');
+const zoomCaption = $<HTMLElement>('[data-zoom-caption]');
+
+document.addEventListener('click', (e) => {
+  const btn = (e.target as Element).closest<HTMLButtonElement>('[data-zoom]');
+  if (!btn) return;
+  zoomImg.src = btn.dataset.zoom!;
+  zoomImg.alt = btn.dataset.zoomName!;
+  zoomCaption.textContent = btn.dataset.zoomName!;
+  zoom.showModal();
+});
+// Close on the ✕ or a tap outside the photo (the dialog itself is the backdrop area).
+zoom.addEventListener('click', (e) => {
+  if (e.target === zoom || (e.target as Element).closest('[data-zoom-close]')) zoom.close();
+});
+
 // ── Remember the language picked with the switcher ───────
 
 for (const link of $$<HTMLAnchorElement>('.lang a')) {

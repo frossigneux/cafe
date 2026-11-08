@@ -482,6 +482,80 @@ body[data-closed] .status {
   opacity: 0.6;
 }
 
+.item-photo-btn {
+  display: block;
+  padding: 0;
+  border: 0;
+  border-radius: var(--r-m);
+  background: none;
+  cursor: zoom-in;
+}
+
+/* Enlarged dish photo */
+
+.zoom {
+  width: 100%;
+  max-width: 640px;
+  max-height: 100dvh;
+  margin: auto;
+  padding: var(--sp-4);
+  border: 0;
+  background: transparent;
+  overflow: visible;
+}
+
+.zoom::backdrop {
+  background: rgb(23 15 10 / 0.82);
+}
+
+.zoom figure {
+  margin: 0;
+}
+
+.zoom img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--r-l);
+  box-shadow: 0 16px 40px rgb(0 0 0 / 0.4);
+}
+
+.zoom figcaption {
+  margin-top: var(--sp-3);
+  color: #fff;
+  font-size: var(--t-l);
+  font-weight: 700;
+  text-align: center;
+}
+
+.zoom-close {
+  position: absolute;
+  top: calc(var(--sp-4) - 18px);
+  right: calc(var(--sp-4) - 18px);
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: var(--shadow-card);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .zoom[open] {
+    animation: zoom-in 0.25s var(--ease-out);
+  }
+}
+
+@keyframes zoom-in {
+  from {
+    transform: scale(0.94);
+    opacity: 0;
+  }
+}
+
 /* Temporarily unavailable: still listed so regulars know it comes back. */
 
 .item--off .item-text {
