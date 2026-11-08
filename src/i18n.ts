@@ -18,8 +18,8 @@ const strings = {
     atCafe: 'მხოლოდ კაფეში, ონლაინ შეკვეთის გარეშე.',
     openMap: 'რუკაზე ნახვა',
     viewOrder: 'შეკვეთის ნახვა',
-    title: 'პიცა, ტორტები და ყავა — შეკვეთა WhatsApp-ით',
-    metaDesc: 'საოჯახო კაფე: პიცა, ტორტები, ყავა და ჩაი. შეუკვეთეთ პიცა, ტორტი და გამაგრილებელი სასმელები ონლაინ და წაიღეთ ადგილიდან — შეკვეთა მოდის WhatsApp-ით.',
+    title: 'პიცა, ხაჭაპური და ხინკალი — შეკვეთა WhatsApp-ით',
+    metaDesc: 'საოჯახო კაფე ნატახტარში: პიცა, ხაჭაპური, ხინკალი, ყავა და ჩაი. შეუკვეთეთ ონლაინ და წაიღეთ ადგილიდან — შეკვეთა მოდის WhatsApp-ით.',
     open: 'ღიაა',
     closed: 'დაკეტილია · გაიხსნება {t}-ზე',
     pickupOnly: 'მხოლოდ თვითგატანა',
@@ -29,7 +29,7 @@ const strings = {
     addOne: 'დაამატე: {name}',
     removeOne: 'წაშალე ერთი: {name}',
     inOrder: '{n} შეკვეთაში',
-    empty: 'დაამატეთ პიცა ან ტორტი და ის აქ გამოჩნდება.',
+    empty: 'დაამატეთ კერძი და ის აქ გამოჩნდება.',
     yourOrder: 'თქვენი შეკვეთა',
     openOrder: 'შეკვეთა',
     close: 'დახურვა',
@@ -46,7 +46,7 @@ const strings = {
     optional: 'არასავალდებულო',
     total: 'ჯამი',
     send: 'გაგზავნა WhatsApp-ით',
-    emptyError: 'შეკვეთა ცარიელია. ჯერ დაამატეთ პიცა ან ტორტი.',
+    emptyError: 'შეკვეთა ცარიელია. ჯერ დაამატეთ კერძი.',
     transferHint: 'გადარიცხეთ მას შემდეგ, რაც WhatsApp-ში შეკვეთას დაგიდასტურებთ. დანიშნულებაში მიუთითეთ თქვენი სახელი.',
     holder: 'მიმღები',
     copy: 'კოპირება',
@@ -79,8 +79,8 @@ const strings = {
     atCafe: 'Served at the café only, not available to order online.',
     openMap: 'Open in Maps',
     viewOrder: 'View order',
-    title: 'Pizza, cakes and coffee — order on WhatsApp',
-    metaDesc: 'Family café: pizza, cakes, coffee and tea. Order pizzas, cakes and cold drinks online for pickup; your order reaches us on WhatsApp.',
+    title: 'Pizza, khachapuri and khinkali — order on WhatsApp',
+    metaDesc: 'Family café in Natakhtari: pizza, khachapuri, khinkali, coffee and tea. Order online for pickup; your order reaches us on WhatsApp.',
     open: 'Open now',
     closed: 'Closed · opens at {t}',
     pickupOnly: 'Pickup only',
@@ -90,7 +90,7 @@ const strings = {
     addOne: 'Add one {name}',
     removeOne: 'Remove one {name}',
     inOrder: '{n} in your order',
-    empty: 'Add a pizza or a cake and it shows up here.',
+    empty: 'Add a dish and it shows up here.',
     yourOrder: 'Your order',
     openOrder: 'Your order',
     close: 'Close',
@@ -107,7 +107,7 @@ const strings = {
     optional: 'optional',
     total: 'Total',
     send: 'Send on WhatsApp',
-    emptyError: 'Your order is empty. Add a pizza or a cake first.',
+    emptyError: 'Your order is empty. Add a dish first.',
     transferHint: 'Transfer once we confirm your order in WhatsApp. Put your name as the payment reference.',
     holder: 'Account holder',
     copy: 'Copy',
@@ -140,8 +140,8 @@ const strings = {
     atCafe: 'Только в кафе, без онлайн-заказа.',
     openMap: 'Открыть на карте',
     viewOrder: 'Посмотреть заказ',
-    title: 'Пицца, торты и кофе — заказ через WhatsApp',
-    metaDesc: 'Семейное кафе: пицца, торты, кофе и чай. Закажите пиццу, торты и холодные напитки онлайн с самовывозом — заказ приходит нам в WhatsApp.',
+    title: 'Пицца, хачапури и хинкали — заказ через WhatsApp',
+    metaDesc: 'Семейное кафе в Натахтари: пицца, хачапури, хинкали, кофе и чай. Закажите онлайн с самовывозом — заказ приходит нам в WhatsApp.',
     open: 'Открыто',
     closed: 'Закрыто · откроется в {t}',
     pickupOnly: 'Только самовывоз',
@@ -151,7 +151,7 @@ const strings = {
     addOne: 'Добавить: {name}',
     removeOne: 'Убрать одну: {name}',
     inOrder: 'В заказе: {n}',
-    empty: 'Добавьте пиццу или торт, и они появятся здесь.',
+    empty: 'Добавьте блюдо, и оно появится здесь.',
     yourOrder: 'Ваш заказ',
     openOrder: 'Ваш заказ',
     close: 'Закрыть',
@@ -168,7 +168,7 @@ const strings = {
     optional: 'необязательно',
     total: 'Итого',
     send: 'Отправить в WhatsApp',
-    emptyError: 'Заказ пуст. Сначала добавьте пиццу или торт.',
+    emptyError: 'Заказ пуст. Сначала добавьте блюдо.',
     transferHint: 'Переведите после того, как мы подтвердим заказ в WhatsApp. В назначении платежа укажите имя.',
     holder: 'Получатель',
     copy: 'Копировать',
@@ -207,6 +207,8 @@ export function itemCount(lang: Lang, n: number): string {
   return t(lang, 'items', { n });
 }
 
+// Whole lari stay whole (₾ 20); anything with tetri shows two decimals (₾ 1.70).
 export function price(n: number): string {
-  return `₾ ${n}`;
+  const v = Math.round(n * 100) / 100;
+  return `₾ ${Number.isInteger(v) ? v : v.toFixed(2)}`;
 }

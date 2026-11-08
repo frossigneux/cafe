@@ -55,6 +55,7 @@ If you made a mistake, a red cross appears instead. Click it, then **Details**: 
 ## Settings
 
 - `"whatsapp"`: the number that receives orders, with country code, e.g. `"+995 555 12 34 56"`.
+- `"facebook"`: link to the Facebook page, shown in the Info section. Remove the line to hide it.
 - `"location"`: the pickup point on the map, as `{ "lat": 41.91935, "lng": 44.727734 }`. In Google Maps, right-click the place and click the coordinates to copy them. Remove the line to hide the map link.
 - `"openingHours"`: one line per day (`monday` … `sunday`), 24-hour clock, Tbilisi time, e.g. `"friday": { "open": "10:00", "close": "23:00" }`. Write `"sunday": "closed"` for a day off. Closing after midnight is not supported.
 - `"bankAccounts"`: IBAN and account holder for Bank of Georgia (`bog`) and TBC (`tbc`). Spaces in the IBAN are fine.

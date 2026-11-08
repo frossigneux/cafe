@@ -1,7 +1,7 @@
 {
   "name": "მაი & Family",
   "showPhoto": true,
-  "whatsapp": "+33 6 52 06 03 06",
+  "whatsapp": "+995 593 62 80 90",
   "openingHours": {
     "monday": {
       "open": "10:00",
@@ -33,14 +33,15 @@
     }
   },
   "address": {
-    "ka": "მისამართი მალე",
-    "en": "Address to come",
-    "ru": "Адрес скоро"
+    "ka": "სოფ. ნატახტარი",
+    "en": "Natakhtari village",
+    "ru": "с. Натахтари"
   },
   "location": {
     "lat": 41.91935,
     "lng": 44.727734
   },
+  "facebook": "https://www.facebook.com/share/1FirPqmoLS/",
   "bankAccounts": {
     "bog": {
       "iban": "GE00BG0000000000000000",

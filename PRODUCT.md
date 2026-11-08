@@ -40,7 +40,7 @@ Fast and good value: quick service, fair prices, orders ready on time. The produ
 
 ## Evidence on Hand
 
-Name: მაი & Family (from the storefront sign; the Georgian word may continue beyond what photos show). Location pin: 41.91935, 44.727734. WhatsApp: +33 6 52 06 03 06. One confirmed price: the vegetable pizza is 25 GEL. No logo, full menu, other prices or photos yet. Placeholders remain in content/*.json (IBANs, hours, most prices). On 2026-10-28 the user removed the "sample" labels feature entirely, so the site shows these values as-is; replacing them before real customers use the site is on the owner. Never present invented names, dishes, prices, reviews or photos as real.
+Name: მაი & Family (from the storefront sign; the Georgian word may continue beyond what photos show). Location pin: 41.91935, 44.727734. WhatsApp / phone: +995 593 62 80 90 (business card). Address: სოფ. ნატახტარი (Natakhtari village). Facebook: https://www.facebook.com/share/1FirPqmoLS/. Real menu (photos of the printed menu, 2026-11-08) is in content/menu.json; cold-drink prices were read from a photo of the fridge and are approximate. No logo yet. Placeholders remain in content/*.json (IBANs, hours, most prices). On 2026-10-28 the user removed the "sample" labels feature entirely, so the site shows these values as-is; replacing them before real customers use the site is on the owner. Never present invented names, dishes, prices, reviews or photos as real.
 
 ## Product Principles
 

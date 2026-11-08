@@ -46,8 +46,8 @@ img.paste(photo.crop((left, 0, left + pw, H)), (PANEL, 0))
 
 d = ImageDraw.Draw(img)
 draw_mixed(d, (64, 160), name, 66)
-draw_mixed(d, (64, 290), 'პიცა · ტორტები · ყავა · ჩაი', 34, bold=False)
-draw_mixed(d, (64, 340), 'Pizza · Cakes · Coffee · Tea', 34, bold=False)
+draw_mixed(d, (64, 290), 'პიცა · ხაჭაპური · ხინკალი · ყავა', 29, bold=False)
+draw_mixed(d, (64, 340), 'Pizza · Khachapuri · Khinkali · Coffee', 29, bold=False)
 d.rounded_rectangle((64, 440, 64 + 380, 440 + 72), radius=16, fill=(31, 122, 71))
 draw_mixed(d, (92, 455), 'Order on WhatsApp', 32)
 

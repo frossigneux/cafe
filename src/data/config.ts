@@ -11,6 +11,7 @@ check(typeof s.name === 'string' && s.name.trim(), file, '"name" must be the piz
 check(s.showPhoto === undefined || typeof s.showPhoto === 'boolean', file, '"showPhoto" must be true or false, without quotes');
 
 const whatsapp = String(s.whatsapp ?? '').replace(/\D/g, '');
+check(s.facebook === undefined || (typeof s.facebook === 'string' && /^https:\/\//.test(s.facebook)), file, '"facebook" must be the full page link starting with https://, or be removed');
 check(whatsapp.length >= 9, file, '"whatsapp" must be the full number with country code, e.g. "+995 555 12 34 56"');
 
 // Monday first. Each day is { "open": "10:00", "close": "22:00" } or "closed".
@@ -54,6 +55,9 @@ export const config = {
   address: text(s.address, file, '"address"'),
   // Opens the pin in Google Maps (app on phones, website otherwise).
   location: loc ? { lat: loc.lat as number, lng: loc.lng as number } : null,
+  // As written in settings, for display ("+995 593 62 80 90").
+  phoneDisplay: String(s.whatsapp).trim(),
+  facebook: (s.facebook as string | undefined) ?? null,
   mapUrl: loc ? `https://www.google.com/maps/search/?api=1&query=${loc.lat},${loc.lng}` : null,
   banks: {
     bog: { iban: s.bankAccounts.bog.iban.replace(/\s/g, '') as string, holder: s.bankAccounts.bog.holder as string },

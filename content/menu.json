@@ -2,187 +2,290 @@
   "categories": [
     {
       "name": {
-        "ka": "კლასიკური",
-        "en": "Classics",
-        "ru": "Классические"
+        "ka": "პიცა",
+        "en": "Pizza",
+        "ru": "Пицца"
       },
       "items": [
         {
           "name": {
-            "ka": "მარგარიტა",
-            "en": "Margherita",
-            "ru": "Маргарита"
-          },
-          "description": {
-            "ka": "პომიდორი, მოცარელა, რეჰანი",
-            "en": "Tomato, mozzarella, basil",
-            "ru": "Томаты, моцарелла, базилик"
-          },
-          "price": 15,
-          "promoPrice": 12
-        },
-        {
-          "name": {
             "ka": "პეპერონი",
-            "en": "Pepperoni",
+            "en": "Pepperoni Pizza",
             "ru": "Пепперони"
           },
           "description": {
-            "ka": "პომიდორი, მოცარელა, პეპერონი",
-            "en": "Tomato, mozzarella, pepperoni",
-            "ru": "Томаты, моцарелла, пепперони"
+            "ka": "მოცარელა, პეპერონი, პიცის სოუსი",
+            "en": "mozzarella, pepperoni, pizza sauce",
+            "ru": "моцарелла, пепперони, соус для пиццы"
+          },
+          "price": 22
+        },
+        {
+          "name": {
+            "ka": "მარგარიტა",
+            "en": "Margherita Pizza",
+            "ru": "Маргарита"
+          },
+          "description": {
+            "ka": "მოცარელა, ორეგანო, პიცის სოუსი",
+            "en": "mozzarella, oregano, pizza sauce",
+            "ru": "моцарелла, орегано, соус для пиццы"
+          },
+          "price": 20
+        },
+        {
+          "name": {
+            "ka": "პიცა 4 სეზონი",
+            "en": "Four Seasons Pizza",
+            "ru": "Пицца «Четыре сезона»"
+          },
+          "description": {
+            "ka": "პიცის სოუსი, მოცარელა, პარმეზანი, დორ-ბლუ, ჩედარი",
+            "en": "pizza sauce, mozzarella, Parmesan, blue cheese, cheddar",
+            "ru": "соус для пиццы, моцарелла, пармезан, дор-блю, чеддер"
+          },
+          "price": 26
+        },
+        {
+          "name": {
+            "ka": "პიცა 4 ყველით",
+            "en": "Four Cheese Pizza",
+            "ru": "Пицца «Четыре сыра»"
+          },
+          "description": {
+            "ka": "პიცის სოუსი, მოცარელა, პარმეზანი, დორ-ბლუ, ჩედარი",
+            "en": "pizza sauce, mozzarella, Parmesan, Dorblu, cheddar",
+            "ru": "соус для пиццы, моцарелла, пармезан, дор-блю, чеддер"
+          },
+          "price": 26
+        },
+        {
+          "name": {
+            "ka": "პიცა ცეზარი",
+            "en": "Caesar Pizza",
+            "ru": "Пицца «Цезарь»"
+          },
+          "description": {
+            "ka": "პიცის სოუსი, მოცარელა, ქათმის ფილე, სალათის ფოთოლი, პარმეზანი, ჩერი",
+            "en": "pizza sauce, mozzarella, chicken fillet, lettuce, Parmesan, cherry tomatoes",
+            "ru": "соус для пиццы, моцарелла, куриное филе, листья салата, пармезан, черри"
+          },
+          "price": 25
+        },
+        {
+          "name": {
+            "ka": "პიცა კაპრეზე",
+            "en": "Caprese Pizza",
+            "ru": "Пицца «Капрезе»"
+          },
+          "price": 26
+        },
+        {
+          "name": {
+            "ka": "პიცა ვეგეტარიანული",
+            "en": "Vegetarian Pizza",
+            "ru": "Вегетарианская пицца"
+          },
+          "price": 24
+        },
+        {
+          "name": {
+            "ka": "პიცა ბეკონით",
+            "en": "Bacon Pizza",
+            "ru": "Пицца с беконом"
+          },
+          "price": 25
+        },
+        {
+          "name": {
+            "ka": "პიცა ბარბექიუ",
+            "en": "BBQ Pizza",
+            "ru": "Пицца Барбекю"
+          },
+          "price": 25
+        },
+        {
+          "name": {
+            "ka": "პიცა ფუნგი პროშუტო",
+            "en": "Funghi Prosciutto Pizza",
+            "ru": "Пицца «Фунги прошутто»"
+          },
+          "price": 24
+        }
+      ]
+    },
+    {
+      "name": {
+        "ka": "ხინკალი",
+        "en": "Khinkali",
+        "ru": "Хинкали"
+      },
+      "items": [
+        {
+          "name": {
+            "ka": "ხინკალი ქალაქური",
+            "en": "City-Style Khinkali",
+            "ru": "Хинкали по-городски"
+          },
+          "description": {
+            "ka": "ფასი 1 ცალზე",
+            "en": "Price per piece",
+            "ru": "Цена за штуку"
+          },
+          "price": 2
+        },
+        {
+          "name": {
+            "ka": "სოკოს ხინკალი",
+            "en": "Mushroom Khinkali",
+            "ru": "Хинкали с грибами"
+          },
+          "description": {
+            "ka": "ფასი 1 ცალზე",
+            "en": "Price per piece",
+            "ru": "Цена за штуку"
+          },
+          "price": 1.7
+        },
+        {
+          "name": {
+            "ka": "ხაჭოს ხინკალი",
+            "en": "Cottage Cheese Khinkali",
+            "ru": "Хинкали с творогом"
+          },
+          "description": {
+            "ka": "ფასი 1 ცალზე",
+            "en": "Price per piece",
+            "ru": "Цена за штуку"
+          },
+          "price": 1.7
+        },
+        {
+          "name": {
+            "ka": "კარტოფილის ხინკალი",
+            "en": "Potato Khinkali",
+            "ru": "Хинкали с картофелем"
+          },
+          "description": {
+            "ka": "ფასი 1 ცალზე",
+            "en": "Price per piece",
+            "ru": "Цена за штуку"
+          },
+          "price": 1.5
+        }
+      ]
+    },
+    {
+      "name": {
+        "ka": "ხაჭაპური და ღვეზელები",
+        "en": "Khachapuri & pies",
+        "ru": "Хачапури и пироги"
+      },
+      "items": [
+        {
+          "name": {
+            "ka": "აჭარული ხაჭაპური",
+            "en": "Adjarian Khachapuri",
+            "ru": "Аджарский хачапури"
           },
           "price": 18
         },
         {
           "name": {
-            "ka": "ლორი და სოკო",
-            "en": "Ham & mushroom",
-            "ru": "Ветчина и грибы"
+            "ka": "იმერული ხაჭაპური",
+            "en": "Imeretian Khachapuri",
+            "ru": "Имеретинский хачапури"
           },
-          "description": {
-            "ka": "პომიდორი, მოცარელა, ლორი, შამპინიონი",
-            "en": "Tomato, mozzarella, ham, champignons",
-            "ru": "Томаты, моцарелла, ветчина, шампиньоны"
-          },
-          "price": 19
+          "price": 18
         },
         {
           "name": {
-            "ka": "ოთხი ყველი",
-            "en": "Four cheese",
-            "ru": "Четыре сыра"
+            "ka": "მეგრული ხაჭაპური",
+            "en": "Megrelian Khachapuri",
+            "ru": "Мегрельский хачапури"
           },
-          "description": {
-            "ka": "მოცარელა, სულგუნი, გაუდა, ლურჯი ყველი",
-            "en": "Mozzarella, sulguni, gouda, blue cheese",
-            "ru": "Моцарелла, сулугуни, гауда, голубой сыр"
+          "price": 20
+        },
+        {
+          "name": {
+            "ka": "ფენოვანი ხაჭაპური",
+            "en": "Puff Pastry Khachapuri",
+            "ru": "Слоёный хачапури"
           },
-          "price": 21,
-          "hidden": true
+          "price": 20
+        },
+        {
+          "name": {
+            "ka": "სამეფო ხაჭაპური",
+            "en": "Royal Khachapuri",
+            "ru": "Царский хачапури"
+          },
+          "price": 23
+        },
+        {
+          "name": {
+            "ka": "ლობიანი",
+            "en": "Lobiani",
+            "ru": "Лобиани"
+          },
+          "price": 15
+        },
+        {
+          "name": {
+            "ka": "ხაბიზგინა",
+            "en": "Khabizgina",
+            "ru": "Хабизгина"
+          },
+          "price": 15
+        },
+        {
+          "name": {
+            "ka": "ჭახრაკინა",
+            "en": "Chakhrakina",
+            "ru": "Чахракина"
+          },
+          "price": 17
+        },
+        {
+          "name": {
+            "ka": "კუბდარი",
+            "en": "Kubdari",
+            "ru": "Кубдари"
+          },
+          "price": 20
+        },
+        {
+          "name": {
+            "ka": "გურული ღვეზელი",
+            "en": "Gurian Pie",
+            "ru": "Гурийский пирог"
+          },
+          "price": 16
         }
       ]
     },
     {
       "name": {
-        "ka": "ქართული",
-        "en": "Georgian twist",
-        "ru": "По-грузински"
+        "ka": "სალათი და გარნირი",
+        "en": "Salad & sides",
+        "ru": "Салат и гарнир"
       },
       "items": [
         {
           "name": {
-            "ka": "სულგუნი და სოკო",
-            "en": "Sulguni & mushroom",
-            "ru": "Сулугуни и грибы"
+            "ka": "ცეზარის სალათი",
+            "en": "Caesar Salad",
+            "ru": "Салат «Цезарь»"
           },
-          "description": {
-            "ka": "სულგუნი, შამპინიონი, ნივრის ზეთი",
-            "en": "Sulguni, champignons, garlic oil",
-            "ru": "Сулугуни, шампиньоны, чесночное масло"
-          },
-          "price": 19
+          "price": 18
         },
         {
           "name": {
-            "ka": "იმერული",
-            "en": "Imeruli",
-            "ru": "Имерули"
+            "ka": "კარტოფილი ფრი",
+            "en": "French Fries",
+            "ru": "Картофель фри"
           },
-          "description": {
-            "ka": "იმერული ყველი, სულგუნი, კვერცხის გული",
-            "en": "Imeruli cheese, sulguni, egg yolk",
-            "ru": "Имеретинский сыр, сулугуни, желток"
-          },
-          "price": 20,
-          "available": false
-        },
-        {
-          "name": {
-            "ka": "ქათამი აჯიკით",
-            "en": "Adjika chicken",
-            "ru": "Курица с аджикой"
-          },
-          "description": {
-            "ka": "ქათამი, აჯიკა, მოცარელა, წითელი ხახვი",
-            "en": "Chicken, adjika, mozzarella, red onion",
-            "ru": "Курица, аджика, моцарелла, красный лук"
-          },
-          "price": 21
-        },
-        {
-          "name": {
-            "ka": "ბოსტნეულის პიცა",
-            "en": "Vegetable pizza",
-            "ru": "Овощная пицца"
-          },
-          "description": {
-            "ka": "პომიდორი, ბულგარული წიწაკა, ზეთისხილი, ხახვი",
-            "en": "Tomato, bell pepper, olives, onion",
-            "ru": "Томаты, болгарский перец, оливки, лук"
-          },
-          "price": 25
-        }
-      ]
-    },
-    {
-      "name": {
-        "ka": "ტორტები",
-        "en": "Cakes",
-        "ru": "Торты"
-      },
-      "items": [
-        {
-          "name": {
-            "ka": "თაფლის ტორტი",
-            "en": "Honey cake",
-            "ru": "Медовик"
-          },
-          "description": {
-            "ka": "ნაჭერი",
-            "en": "Slice",
-            "ru": "Кусок"
-          },
-          "price": 8
-        },
-        {
-          "name": {
-            "ka": "ნაპოლეონი",
-            "en": "Napoleon",
-            "ru": "Наполеон"
-          },
-          "description": {
-            "ka": "ნაჭერი",
-            "en": "Slice",
-            "ru": "Кусок"
-          },
-          "price": 8
-        },
-        {
-          "name": {
-            "ka": "ჩიზქეიქი",
-            "en": "Cheesecake",
-            "ru": "Чизкейк"
-          },
-          "description": {
-            "ka": "ნაჭერი",
-            "en": "Slice",
-            "ru": "Кусок"
-          },
-          "price": 9
-        },
-        {
-          "name": {
-            "ka": "შოკოლადის ტორტი",
-            "en": "Chocolate cake",
-            "ru": "Шоколадный торт"
-          },
-          "description": {
-            "ka": "ნაჭერი",
-            "en": "Slice",
-            "ru": "Кусок"
-          },
-          "price": 9
+          "price": 6
         }
       ]
     },
@@ -194,56 +297,157 @@
       },
       "items": [
         {
+          "id": "cappy",
           "name": {
-            "ka": "კოლა",
-            "en": "Cola",
-            "ru": "Кола"
+            "ka": "Cappy წვენი",
+            "en": "Cappy juice",
+            "ru": "Сок Cappy"
+          },
+          "description": {
+            "ka": "ბოთლი",
+            "en": "Bottle",
+            "ru": "Бутылка"
+          },
+          "price": 3.5
+        },
+        {
+          "id": "fuse-tea-large",
+          "name": {
+            "ka": "Fuse Tea ცივი ჩაი (დიდი)",
+            "en": "Fuse Tea iced tea (large)",
+            "ru": "Холодный чай Fuse Tea (большой)"
+          },
+          "price": 3
+        },
+        {
+          "id": "fuse-tea-small",
+          "name": {
+            "ka": "Fuse Tea ცივი ჩაი (პატარა)",
+            "en": "Fuse Tea iced tea (small)",
+            "ru": "Холодный чай Fuse Tea (маленький)"
+          },
+          "price": 1.8
+        },
+        {
+          "id": "coca-cola-bottle",
+          "name": {
+            "ka": "Coca-Cola (ბოთლი)",
+            "en": "Coca-Cola (bottle)",
+            "ru": "Coca-Cola (бутылка)"
+          },
+          "price": 2.5
+        },
+        {
+          "id": "coca-cola-can",
+          "name": {
+            "ka": "Coca-Cola",
+            "en": "Coca-Cola",
+            "ru": "Coca-Cola"
           },
           "description": {
             "ka": "ქილა, 0.33 ლ",
             "en": "Can, 0.33 L",
             "ru": "Банка, 0,33 л"
           },
-          "price": 3
+          "price": 2.5
         },
         {
+          "id": "coca-cola-zero-can",
           "name": {
-            "ka": "ტარხუნის ლიმონათი",
-            "en": "Tarragon lemonade",
-            "ru": "Лимонад «Тархун»"
+            "ka": "Coca-Cola Zero",
+            "en": "Coca-Cola Zero",
+            "ru": "Coca-Cola Zero"
           },
           "description": {
             "ka": "ქილა, 0.33 ლ",
             "en": "Can, 0.33 L",
             "ru": "Банка, 0,33 л"
           },
-          "price": 3
+          "price": 2.5
         },
         {
+          "id": "coca-cola-coffee-can",
           "name": {
-            "ka": "ცივი ჩაი",
-            "en": "Iced tea",
-            "ru": "Холодный чай"
+            "ka": "Coca-Cola ყავით",
+            "en": "Coca-Cola with Coffee",
+            "ru": "Coca-Cola с кофе"
           },
           "description": {
             "ka": "ქილა, 0.33 ლ",
             "en": "Can, 0.33 L",
             "ru": "Банка, 0,33 л"
           },
-          "price": 3
+          "price": 2.5
         },
         {
+          "id": "fanta-can",
           "name": {
-            "ka": "გაზიანი წყალი",
-            "en": "Sparkling water",
-            "ru": "Газированная вода"
+            "ka": "Fanta",
+            "en": "Fanta",
+            "ru": "Fanta"
           },
           "description": {
-            "ka": "0.5 ლ",
-            "en": "0.5 L",
-            "ru": "0,5 л"
+            "ka": "ქილა, 0.33 ლ",
+            "en": "Can, 0.33 L",
+            "ru": "Банка, 0,33 л"
           },
-          "price": 2
+          "price": 2.5
+        },
+        {
+          "id": "sprite-can",
+          "name": {
+            "ka": "Sprite",
+            "en": "Sprite",
+            "ru": "Sprite"
+          },
+          "description": {
+            "ka": "ქილა, 0.33 ლ",
+            "en": "Can, 0.33 L",
+            "ru": "Банка, 0,33 л"
+          },
+          "price": 2.5
+        },
+        {
+          "id": "burn-can",
+          "name": {
+            "ka": "Burn ენერგეტიკული სასმელი",
+            "en": "Burn energy drink",
+            "ru": "Энергетик Burn"
+          },
+          "description": {
+            "ka": "ქილა, 0.33 ლ",
+            "en": "Can, 0.33 L",
+            "ru": "Банка, 0,33 л"
+          },
+          "price": 2.5
+        },
+        {
+          "id": "fanta-mini",
+          "name": {
+            "ka": "Fanta მინი",
+            "en": "Fanta mini",
+            "ru": "Fanta мини"
+          },
+          "description": {
+            "ka": "მინი ქილა",
+            "en": "Mini can",
+            "ru": "Мини-банка"
+          },
+          "price": 1.2
+        },
+        {
+          "id": "coca-cola-mini",
+          "name": {
+            "ka": "Coca-Cola მინი",
+            "en": "Coca-Cola mini",
+            "ru": "Coca-Cola мини"
+          },
+          "description": {
+            "ka": "მინი ქილა",
+            "en": "Mini can",
+            "ru": "Мини-банка"
+          },
+          "price": 1.2
         }
       ]
     },
@@ -257,17 +461,17 @@
       "items": [
         {
           "name": {
-            "ka": "ესპრესო",
-            "en": "Espresso",
-            "ru": "Эспрессо"
+            "ka": "ამერიკანო",
+            "en": "Americano",
+            "ru": "Американо"
           },
           "price": 5
         },
         {
           "name": {
-            "ka": "ამერიკანო",
-            "en": "Americano",
-            "ru": "Американо"
+            "ka": "ესპრესო",
+            "en": "Espresso",
+            "ru": "Эспрессо"
           },
           "price": 6
         },
@@ -276,14 +480,6 @@
             "ka": "კაპუჩინო",
             "en": "Cappuccino",
             "ru": "Капучино"
-          },
-          "price": 7
-        },
-        {
-          "name": {
-            "ka": "ლატე",
-            "en": "Latte",
-            "ru": "Латте"
           },
           "price": 8
         }
@@ -299,11 +495,27 @@
       "items": [
         {
           "name": {
-            "ka": "შავი ჩაი",
-            "en": "Black tea",
-            "ru": "Чёрный чай"
+            "ka": "ტყის კენკრის ჩაი",
+            "en": "Forest berry tea",
+            "ru": "Чай с лесными ягодами"
           },
-          "price": 4
+          "price": 5
+        },
+        {
+          "name": {
+            "ka": "ციტრუსის ჩაი",
+            "en": "Citrus tea",
+            "ru": "Цитрусовый чай"
+          },
+          "price": 5
+        },
+        {
+          "name": {
+            "ka": "რძიანი ულუნი",
+            "en": "Milk oolong",
+            "ru": "Улун с молоком"
+          },
+          "price": 5
         },
         {
           "name": {
@@ -315,11 +527,19 @@
         },
         {
           "name": {
-            "ka": "მცენარეული ჩაი",
-            "en": "Herbal tea",
-            "ru": "Травяной чай"
+            "ka": "ჩაი ყვავილების არომატით",
+            "en": "Tea with floral notes",
+            "ru": "Чай с цветочным ароматом"
           },
           "price": 5
+        },
+        {
+          "name": {
+            "ka": "შავი ჩაი",
+            "en": "Black tea",
+            "ru": "Чёрный чай"
+          },
+          "price": 4
         }
       ]
     }

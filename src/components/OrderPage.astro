@@ -39,10 +39,11 @@ const jsonLd = {
   url: canonical,
   image: ogImage,
   description: t(lang, 'metaDesc'),
-  servesCuisine: ['Pizza', 'Cakes', 'Coffee', 'Tea'],
+  servesCuisine: ['Pizza', 'Georgian', 'Coffee', 'Tea'],
   telephone: `+${config.whatsapp}`,
   priceRange: '₾',
-  address: { '@type': 'PostalAddress', addressCountry: 'GE' },
+  address: { '@type': 'PostalAddress', addressLocality: config.address.en, addressCountry: 'GE' },
+  ...(config.facebook && { sameAs: [config.facebook] }),
   ...(config.location && {
     geo: { '@type': 'GeoCoordinates', latitude: config.location.lat, longitude: config.location.lng },
     hasMap: config.mapUrl,
@@ -253,6 +254,18 @@ const icon = {
                 <a href={`https://wa.me/${config.whatsapp}`} rel="noopener">
                   {t(lang, 'writeUs')}
                 </a>
+                <br />
+                <a href={`tel:+${config.whatsapp}`}>{config.phoneDisplay}</a>
+                {
+                  config.facebook && (
+                    <>
+                      <br />
+                      <a href={config.facebook} target="_blank" rel="noopener">
+                        Facebook
+                      </a>
+                    </>
+                  )
+                }
               </dd>
             </div>
           </dl>
