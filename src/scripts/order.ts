@@ -454,7 +454,20 @@ const zoomCaption = $<HTMLElement>('[data-zoom-caption]');
 document.addEventListener('click', (e) => {
   const btn = (e.target as Element).closest<HTMLButtonElement>('[data-zoom]');
   if (!btn) return;
-  zoomImg.src = btn.dataset.zoom!;
+  // Show this dish's thumbnail at once (never the previous photo), then swap in the
+  // sharp version as soon as it has decoded.
+  const full = btn.dataset.zoom!;
+  const thumb = btn.querySelector('img');
+  zoomImg.dataset.want = full;
+  zoomImg.src = thumb?.currentSrc || full;
+  const loader = new Image();
+  loader.src = full;
+  loader
+    .decode()
+    .then(() => {
+      if (zoomImg.dataset.want === full) zoomImg.src = full;
+    })
+    .catch(() => {});
   zoomImg.alt = btn.dataset.zoomName!;
   zoomCaption.textContent = btn.dataset.zoomName!;
   zoom.showModal();
