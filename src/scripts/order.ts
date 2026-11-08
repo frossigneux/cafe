@@ -528,6 +528,22 @@ addEventListener(
 );
 syncTabs();
 
+const galleryTrack = document.querySelector<HTMLElement>('[data-gallery-track]');
+if (galleryTrack) {
+  const dots = document.querySelectorAll<HTMLElement>('[data-gallery-dot]');
+  const next = document.querySelector<HTMLButtonElement>('[data-gallery-next]');
+  const current = () => Math.round(galleryTrack.scrollLeft / galleryTrack.clientWidth);
+  galleryTrack.addEventListener('scroll', () => {
+    const i = current();
+    dots.forEach((d, j) => d.classList.toggle('is-on', j === i));
+    next?.classList.toggle('is-back', i === dots.length - 1);
+  }, { passive: true });
+  next?.addEventListener('click', () => {
+    const i = current() === dots.length - 1 ? 0 : current() + 1;
+    galleryTrack.scrollTo({ left: i * galleryTrack.clientWidth, behavior: 'smooth' });
+  });
+}
+
 setupHours();
 setInterval(setupHours, 60_000);
 render();

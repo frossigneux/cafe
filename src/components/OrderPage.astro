@@ -8,6 +8,7 @@ import '@fontsource/noto-sans-georgian/700.css';
 import '../styles/global.css';
 import { Image, getImage } from 'astro:assets';
 import cafe from '../assets/cafe.jpg';
+import illustration from '../assets/illustration.jpg';
 import type { ImageMetadata } from 'astro';
 import { siFacebook, siWhatsapp } from 'simple-icons';
 import { config, weekdays } from '../data/config';
@@ -156,15 +157,35 @@ const icon = {
     </header>
 
     <section class={config.showPhoto ? 'venue venue--photo' : 'venue'} aria-labelledby="venue-name">
-      {config.showPhoto && (<Image
-        class="venue-photo"
-        src={cafe}
-        alt={t(lang, 'photoAlt')}
-        widths={[400, 688]}
-        sizes="(min-width: 960px) 420px, calc(100vw - 32px)"
-        loading="eager"
-        fetchpriority="high"
-      />)}
+      {config.showPhoto && (
+        <div class="venue-gallery" data-gallery>
+          <div class="venue-track" data-gallery-track>
+            <Image
+              class="venue-photo"
+              src={illustration}
+              alt={t(lang, 'illustrationAlt')}
+              widths={[400, 688]}
+              sizes="(min-width: 960px) 420px, calc(100vw - 32px)"
+              loading="eager"
+              fetchpriority="high"
+            />
+            <Image
+              class="venue-photo"
+              src={cafe}
+              alt={t(lang, 'photoAlt')}
+              widths={[400, 840]}
+              sizes="(min-width: 960px) 420px, calc(100vw - 32px)"
+              loading="lazy"
+            />
+          </div>
+          <div class="venue-dots" aria-hidden="true">
+            <span class="is-on" data-gallery-dot></span><span data-gallery-dot></span>
+          </div>
+          <button class="venue-next" type="button" data-gallery-next aria-label={t(lang, 'nextPhoto')}>
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7.5 4.5 13 10l-5.5 5.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      )}
       <div class="venue-body">
       <p class="venue-info">
         <span class="status"><span class="status-dot" aria-hidden="true"></span><span data-status data-open-text={t(lang, 'open')} data-closed-text={t(lang, 'closed', { t: '{t}' })} data-closed-day-text={t(lang, 'closedDay', { d: '{d}', t: '{t}' })}>{t(lang, 'open')}</span></span>

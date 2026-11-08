@@ -2,7 +2,7 @@
 
 Run: python3 -I scripts/make-og.py
 Left: tomato panel with the café name and what it serves. Right: the café illustration.
-Re-run after changing the name or src/assets/cafe.jpg.
+Re-run after changing the name or src/assets/illustration.jpg.
 """
 import json
 import pathlib
@@ -37,7 +37,7 @@ def draw_mixed(d, xy, text, size, bold=True, fill=CREAM):
 
 
 img = Image.new('RGB', (W, H), TOMATO)
-photo = Image.open(root / 'src/assets/cafe.jpg').convert('RGB')
+photo = Image.open(root / 'src/assets/illustration.jpg').convert('RGB')
 scale = H / photo.height
 photo = photo.resize((round(photo.width * scale), H), Image.LANCZOS)
 pw = W - PANEL
