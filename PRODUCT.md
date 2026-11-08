@@ -12,7 +12,7 @@ delegated: Astro. The pages are mostly static (menu, info), so Astro ships them 
 
 ## Users
 
-Customers in Georgia ordering online for pickup from Family, a café (storefront: coffee, tea, cakes, pizza). Pizzas, cakes and canned cold drinks are ordered online; coffee and tea are listed for information and served at the café. The audience mixes Georgian speakers, Russian speakers, and English-speaking visitors and expats. They are usually hungry and want to get food quickly, so the order should take as few steps as possible.
+Customers in Georgia ordering online from Family, a café (storefront: coffee, tea, cakes, pizza). Pizzas, cakes and canned cold drinks are ordered online; coffee and tea are listed for information and served at the café. The audience mixes Georgian speakers, Russian speakers, and English-speaking visitors and expats. They are usually hungry and want to get food quickly, so the order should take as few steps as possible.
 
 ## Product Purpose
 
@@ -26,7 +26,7 @@ Fast and good value: quick service, fair prices, orders ready on time. The produ
 
 - Core flow: browse menu → build cart → send the order via WhatsApp. The site composes the order, and WhatsApp carries it to the pizzeria. There is no order backend.
 - Guest checkout only: no customer accounts.
-- Pickup only: no delivery.
+- No delivery: customers pick up their order or eat in at the café.
 - Payment: the customer chooses between a bank transfer to the pizzeria's account at TBC or Bank of Georgia (BOG), done from their banking app, and paying at pickup. No card-payment gateway.
 - Languages: Georgian, English, Russian.
 - No staff/kitchen view in scope. The pizzeria receives and confirms orders in WhatsApp.

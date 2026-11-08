@@ -158,7 +158,6 @@ const icon = {
       <div class="venue-body">
       <p class="venue-info">
         <span class="status"><span class="status-dot" aria-hidden="true"></span><span data-status data-open-text={t(lang, 'open')} data-closed-text={t(lang, 'closed', { t: '{t}' })} data-closed-day-text={t(lang, 'closedDay', { d: '{d}', t: '{t}' })}>{t(lang, 'open')}</span></span>
-        <span class="chip">{t(lang, 'pickupOnly')}</span>
         {
           config.mapUrl && (
             <a class="chip chip--link" href={config.mapUrl} target="_blank" rel="noopener">
@@ -229,7 +228,7 @@ const icon = {
             <div>
               <dt>{t(lang, 'address')}</dt>
               <dd>
-                {config.address[lang]} · {t(lang, 'pickupOnly')}
+                {config.address[lang]}
                 {
                   config.mapUrl && (
                     <>
