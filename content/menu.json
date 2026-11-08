@@ -41,9 +41,9 @@
             "ru": "Пицца «Четыре сезона»"
           },
           "description": {
-            "ka": "პიცის სოუსი, მოცარელა, პარმეზანი, დორ-ბლუ, ჩედარი",
-            "en": "pizza sauce, mozzarella, Parmesan, blue cheese, cheddar",
-            "ru": "соус для пиццы, моцарелла, пармезан, дор-блю, чеддер"
+            "ka": "პიცის სოუსი, მოცარელა, ლორი, სოკო, ზეთისხილი",
+            "en": "pizza sauce, mozzarella, ham, mushrooms, olives",
+            "ru": "соус для пиццы, моцарелла, ветчина, грибы, маслины"
           },
           "price": 26,
           "photo": "four-seasons.jpg"
