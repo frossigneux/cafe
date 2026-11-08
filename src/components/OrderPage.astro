@@ -8,6 +8,7 @@ import '@fontsource/noto-sans-georgian/700.css';
 import '../styles/global.css';
 import { Image } from 'astro:assets';
 import cafe from '../assets/cafe.jpg';
+import type { ImageMetadata } from 'astro';
 import { config, weekdays } from '../data/config';
 import { menu } from '../data/menu';
 import { langs, langLabel, langPath, t, price, type Lang } from '../i18n';
@@ -24,6 +25,13 @@ const groups = (iban: string) => iban.match(/.{1,4}/g) ?? [iban];
 const dayName = (i: number) =>
   new Intl.DateTimeFormat(lang, { weekday: 'long', timeZone: 'UTC' }).format(new Date(Date.UTC(2024, 0, 1 + i)));
 const site = Astro.site ?? new URL('http://localhost');
+// Dish photos live in content/photos/ and are referenced by file name in menu.json.
+const photoFiles = import.meta.glob<{ default: ImageMetadata }>('../../content/photos/*.{jpg,jpeg,png,webp}', { eager: true });
+const photoOf = (file: string) => {
+  const hit = photoFiles[`../../content/photos/${file}`];
+  if (!hit) throw new Error(`\n\n✗ content/menu.json: "photo": "${file}" is not in content/photos/ (check the file name and its extension)\n`);
+  return hit.default;
+};
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 const pageTitle = `${config.name} · ${t(lang, 'title')}`;
 const canonical = new URL(langPath[lang], site).href;
@@ -193,6 +201,10 @@ const icon = {
                         {price(i.price)}
                       </p>
                     </div>
+                    <div class={i.photo ? 'item-side item-side--photo' : 'item-side'}>
+                    {i.photo && (
+                      <Image class="item-photo" src={photoOf(i.photo)} alt="" widths={[120, 240]} sizes="120px" loading="lazy" />
+                    )}
                     {!i.available && <span class="off-tag">{t(lang, 'unavailable')}</span>}
                     {c.orderable && i.available && (<div class="qty" data-qty="0">
                       <button class="qty-btn qty-remove" type="button" data-remove aria-label={t(lang, 'removeOne', { name: i.name[lang] })}>
@@ -203,6 +215,7 @@ const icon = {
                         <svg viewBox="0 0 20 20" aria-hidden="true" set:html={icon.plus} />
                       </button>
                     </div>)}
+                    </div>
                   </li>
                 ))}
               </ul>

@@ -200,7 +200,7 @@ a {
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 688 / 478;
+  aspect-ratio: 1400 / 970;
   object-fit: cover;
   background: var(--surface-2);
 }
@@ -439,6 +439,47 @@ body[data-closed] .status {
 
 .item.is-in .price {
   color: var(--tomato-strong);
+}
+
+/* Dish photo with the + button resting on its corner, as in delivery apps. */
+
+.item-side {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.item-side--photo {
+  position: relative;
+  margin-bottom: var(--sp-3);
+}
+
+.item-photo {
+  display: block;
+  width: 112px;
+  height: 96px;
+  object-fit: cover;
+  object-position: 45% 50%;
+  border-radius: var(--r-m);
+  background: var(--surface-2);
+}
+
+.item-side--photo .qty,
+.item-side--photo .off-tag {
+  position: absolute;
+  right: -6px;
+  bottom: -14px;
+  box-shadow: 0 4px 12px rgb(92 52 24 / 0.22);
+}
+
+.item-side--photo .qty[data-qty='0'] {
+  background: var(--surface);
+}
+
+.item--off .item-photo {
+  filter: grayscale(1);
+  opacity: 0.6;
 }
 
 /* Temporarily unavailable: still listed so regulars know it comes back. */

@@ -18,7 +18,8 @@
             "en": "mozzarella, pepperoni, pizza sauce",
             "ru": "моцарелла, пепперони, соус для пиццы"
           },
-          "price": 22
+          "price": 22,
+          "photo": "pepperoni.jpg"
         },
         {
           "name": {
@@ -44,7 +45,8 @@
             "en": "pizza sauce, mozzarella, Parmesan, blue cheese, cheddar",
             "ru": "соус для пиццы, моцарелла, пармезан, дор-блю, чеддер"
           },
-          "price": 26
+          "price": 26,
+          "photo": "four-seasons.jpg"
         },
         {
           "name": {
@@ -70,7 +72,8 @@
             "en": "pizza sauce, mozzarella, chicken fillet, lettuce, Parmesan, cherry tomatoes",
             "ru": "соус для пиццы, моцарелла, куриное филе, листья салата, пармезан, черри"
           },
-          "price": 25
+          "price": 25,
+          "photo": "caesar.jpg"
         },
         {
           "name": {
@@ -86,7 +89,8 @@
             "en": "Vegetarian Pizza",
             "ru": "Вегетарианская пицца"
           },
-          "price": 24
+          "price": 24,
+          "photo": "vegetarian.jpg"
         },
         {
           "name": {
@@ -102,7 +106,8 @@
             "en": "BBQ Pizza",
             "ru": "Пицца Барбекю"
           },
-          "price": 25
+          "price": 25,
+          "photo": "bbq.jpg"
         },
         {
           "name": {
@@ -110,7 +115,8 @@
             "en": "Funghi Prosciutto Pizza",
             "ru": "Пицца «Фунги прошутто»"
           },
-          "price": 24
+          "price": 24,
+          "photo": "funghi-prosciutto.jpg"
         }
       ]
     },

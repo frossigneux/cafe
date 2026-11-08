@@ -48,6 +48,8 @@ If you made a mistake, a red cross appears instead. Click it, then **Details**: 
 
 **Show a category without online ordering** (e.g. coffee and tea, served at the café only). Add `"orderable": false` to the category, next to its `"name"`. Its items show with their price but no + button, under a short "served at the café only" note. Leave it out for categories that can be ordered.
 
+**Add a dish photo.** Upload the picture to the [`photos`](photos) folder (Add file → Upload files), then add its file name to the item, e.g. `"photo": "pepperoni.jpg"`. Landscape photos around 600×480 work best. Remove the line to hide the photo.
+
 **Reorder.** Items and categories appear on the site in the same order as in the file.
 
 **Texts in three languages.** `ka` is Georgian, `en` English, `ru` Russian. If one is missing, the site uses the English text, or the Georgian one if there is no English.

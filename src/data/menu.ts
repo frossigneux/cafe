@@ -12,6 +12,7 @@ export interface Item {
   desc: Text;
   price: number; // GEL, what the customer pays (the promo price during a promo)
   regularPrice?: number; // set only during a promo, shown struck through
+  photo?: string; // file name in content/photos/
   // false: temporarily unavailable (shown greyed out, cannot be ordered).
   available: boolean;
 }
@@ -63,6 +64,11 @@ function load(data: unknown): Category[] {
           file,
           `${label} → "promoPrice" must be a number lower than "price", without quotes (remove the line to end the promo)`,
         );
+        check(
+          i.photo === undefined || (typeof i.photo === 'string' && /^[\w.-]+\.(jpe?g|png|webp)$/i.test(i.photo)),
+          file,
+          `${label} → "photo" must be a file name from content/photos/, e.g. "pepperoni.jpg"`,
+        );
         check(i.available === undefined || typeof i.available === 'boolean', file, `${label} → "available" must be true or false, without quotes`);
         check(i.hidden === undefined || typeof i.hidden === 'boolean', file, `${label} → "hidden" must be true or false, without quotes`);
         if (i.hidden === true) return null;
@@ -73,6 +79,7 @@ function load(data: unknown): Category[] {
           price: (i.promoPrice ?? i.price) as number,
           ...(i.promoPrice !== undefined && { regularPrice: i.price as number }),
           available: i.available !== false,
+          ...(i.photo !== undefined && { photo: i.photo as string }),
         };
       })
       .filter((i): i is Item => i !== null);
