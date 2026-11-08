@@ -200,7 +200,7 @@ a {
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 1400 / 970;
+  aspect-ratio: 1400 / 1124;
   object-fit: cover;
   background: var(--surface-2);
 }
