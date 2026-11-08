@@ -41,9 +41,9 @@
             "ru": "Пицца «Четыре сезона»"
           },
           "description": {
-            "ka": "პიცის სოუსი, მოცარელა, ლორი, სოკო, ზეთისხილი",
-            "en": "pizza sauce, mozzarella, ham, mushrooms, olives",
-            "ru": "соус для пиццы, моцарелла, ветчина, грибы, маслины"
+            "ka": "პიცის სოუსი, მოცარელა; ოთხი ნაწილი: პეპერონი, ლორი და ჰალაპენიო, სალათის ფოთოლი და ჩერი, სოკო და ბულგარული წიწაკა",
+            "en": "pizza sauce, mozzarella; four quarters: pepperoni, ham & jalapeño, lettuce & cherry tomatoes, mushrooms & bell pepper",
+            "ru": "соус для пиццы, моцарелла; четыре части: пепперони, ветчина и халапеньо, салат и черри, грибы и болгарский перец"
           },
           "price": 26,
           "photo": "four-seasons.jpg"
@@ -73,7 +73,7 @@
             "ru": "соус для пиццы, моцарелла, куриное филе, листья салата, пармезан, черри"
           },
           "price": 25,
-          "photo": "caesar.jpg"
+          "photo": "caesar-pizza.jpg"
         },
         {
           "name": {
@@ -98,7 +98,8 @@
             "en": "Bacon Pizza",
             "ru": "Пицца с беконом"
           },
-          "price": 25
+          "price": 25,
+          "photo": "bacon.jpg"
         },
         {
           "name": {
@@ -138,7 +139,8 @@
             "en": "Price per piece",
             "ru": "Цена за штуку"
           },
-          "price": 2
+          "price": 2,
+          "photo": "khinkali.jpg"
         },
         {
           "name": {
@@ -151,7 +153,8 @@
             "en": "Price per piece",
             "ru": "Цена за штуку"
           },
-          "price": 1.7
+          "price": 1.7,
+          "photo": "khinkali.jpg"
         },
         {
           "name": {
@@ -164,7 +167,8 @@
             "en": "Price per piece",
             "ru": "Цена за штуку"
           },
-          "price": 1.7
+          "price": 1.7,
+          "photo": "khinkali.jpg"
         },
         {
           "name": {
@@ -177,7 +181,8 @@
             "en": "Price per piece",
             "ru": "Цена за штуку"
           },
-          "price": 1.5
+          "price": 1.5,
+          "photo": "khinkali.jpg"
         }
       ]
     },
@@ -194,7 +199,8 @@
             "en": "Adjarian Khachapuri",
             "ru": "Аджарский хачапури"
           },
-          "price": 18
+          "price": 18,
+          "photo": "adjarian.jpg"
         },
         {
           "name": {
@@ -202,7 +208,8 @@
             "en": "Imeretian Khachapuri",
             "ru": "Имеретинский хачапури"
           },
-          "price": 18
+          "price": 18,
+          "photo": "imeretian.jpg"
         },
         {
           "name": {
@@ -210,7 +217,8 @@
             "en": "Megrelian Khachapuri",
             "ru": "Мегрельский хачапури"
           },
-          "price": 20
+          "price": 20,
+          "photo": "megrelian.jpg"
         },
         {
           "name": {
@@ -218,7 +226,8 @@
             "en": "Puff Pastry Khachapuri",
             "ru": "Слоёный хачапури"
           },
-          "price": 20
+          "price": 20,
+          "photo": "puff-pastry.jpg"
         },
         {
           "name": {
@@ -226,7 +235,8 @@
             "en": "Royal Khachapuri",
             "ru": "Царский хачапури"
           },
-          "price": 23
+          "price": 23,
+          "photo": "royal.jpg"
         },
         {
           "name": {
@@ -234,7 +244,8 @@
             "en": "Lobiani",
             "ru": "Лобиани"
           },
-          "price": 15
+          "price": 15,
+          "photo": "lobiani.jpg"
         },
         {
           "name": {
@@ -250,7 +261,8 @@
             "en": "Chakhrakina",
             "ru": "Чахракина"
           },
-          "price": 17
+          "price": 17,
+          "photo": "chakhrakina.jpg"
         },
         {
           "name": {
@@ -258,7 +270,8 @@
             "en": "Kubdari",
             "ru": "Кубдари"
           },
-          "price": 20
+          "price": 20,
+          "photo": "kubdari.jpg"
         },
         {
           "name": {
@@ -266,7 +279,8 @@
             "en": "Gurian Pie",
             "ru": "Гурийский пирог"
           },
-          "price": 16
+          "price": 16,
+          "photo": "gurian-pie.jpg"
         }
       ]
     },
@@ -283,7 +297,8 @@
             "en": "Caesar Salad",
             "ru": "Салат «Цезарь»"
           },
-          "price": 18
+          "price": 18,
+          "photo": "caesar-salad.jpg"
         },
         {
           "name": {
@@ -291,7 +306,8 @@
             "en": "French Fries",
             "ru": "Картофель фри"
           },
-          "price": 6
+          "price": 6,
+          "photo": "fries.jpg"
         }
       ]
     },
