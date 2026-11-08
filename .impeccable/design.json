@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "generatedAt": "2026-10-27T16:21:44+00:00",
-  "title": "Design System: Pizzeria (placeholder name)",
+  "title": "Design System: მაი & Family",
   "extensions": {
     "colorMeta": {
       "tomato": {
@@ -218,7 +218,7 @@
     "typographyMeta": {
       "display": {
         "displayName": "Display",
-        "purpose": "Pizzeria name in the header band; 2.75rem at 960px and up."
+        "purpose": "Café name in the header band; 2.75rem at 960px and up."
       },
       "headline": {
         "displayName": "Headline",
@@ -372,13 +372,13 @@
       "kind": "card",
       "refersTo": "card",
       "description": "White card with warm shadow that overlaps the tomato header band.",
-      "html": "<div class=\"ds-band\"><strong>Pizzeria</strong></div><div class=\"ds-card\"><span class=\"ds-chip2\">Pickup only</span><p>Pay by BOG or TBC transfer, or at pickup</p></div>",
+      "html": "<div class=\"ds-band\"><strong>მაი &amp; Family</strong></div><div class=\"ds-card\"><span class=\"ds-chip2\">Pickup only</span><p>Pay by BOG or TBC transfer, or at pickup</p></div>",
       "css": ".ds-band{font-family: var(--font);background:var(--tomato-strong);color:#fff;padding:16px 16px 48px;font-size:var(--t-xl);font-weight:700;letter-spacing:-.01em;}.ds-card{font-family: var(--font);position:relative;margin:-24px 16px 0;padding:16px 24px;background:var(--surface);border-radius:var(--r-l);box-shadow:var(--shadow-card);color:var(--ink);}.ds-chip2{display:inline-flex;min-height:30px;align-items:center;padding:4px 12px;border-radius:999px;background:var(--surface-2);font-size:var(--t-s);}.ds-card p{margin:12px 0 0;font-size:var(--t-s);color:var(--ink-2);}"
     }
   ],
   "narrative": {
     "northStar": "The Warm Counter",
-    "overview": "**Creative North Star: \"The Warm Counter\"**\n\nThis is the restaurant-ordering category standard, built to the finish of a good delivery app and kept warm. Nobody has to learn anything: a tomato header band names the pizzeria, a white venue card overlaps its lower edge with the open status and how to pay, sticky tabs underline the current category, and dish rows carry a round plus button on the right. A floating tomato bar holds the order on phones and opens into a bottom sheet; on desktop the same order stands as a sticky sidebar beside the menu. Convention is the commitment. No metaphor sits on top of it.\n\nThe warmth comes from colour, type and shape, not from imagery. The ground is a warm white, text is ink brown rather than black, shadows are tinted brown, and every interactive edge is rounded. Density is moderate: rows breathe at 16px and secondary text drops to a muted brown. The page uses no photos (the user's decision) and must never use stock food photography.\n\nThe page carries three languages. Georgian, English and Russian get equal care: Georgian runs in Noto Sans Georgian, Latin and Cyrillic run in Rubik, and every string is in sentence case.",
+    "overview": "**Creative North Star: \"The Warm Counter\"**\n\nThis is the restaurant-ordering category standard, built to the finish of a good delivery app and kept warm. Nobody has to learn anything: a tomato header band names the café, a white venue card overlaps its lower edge with the open status and how to pay, sticky tabs underline the current category, and dish rows carry a round plus button on the right. A floating tomato bar holds the order on phones and opens into a bottom sheet; on desktop the same order stands as a sticky sidebar beside the menu. Convention is the commitment. No metaphor sits on top of it.\n\nThe warmth comes from colour, type and shape, not from imagery. The ground is a warm white, text is ink brown rather than black, shadows are tinted brown, and every interactive edge is rounded. Density is moderate: rows breathe at 16px and secondary text drops to a muted brown. The page uses no photos (the user's decision) and must never use stock food photography.\n\nThe page carries three languages. Georgian, English and Russian get equal care: Georgian runs in Noto Sans Georgian, Latin and Cyrillic run in Rubik, and every string is in sentence case.",
     "keyCharacteristics": [
       "Warm white ground, ink-brown text, one tomato accent family.",
       "Green used only for positive outcomes.",
@@ -431,7 +431,7 @@
     ],
     "donts": [
       "Don't bring back the replaced metro world: no navy, no grey ground, no signage capitals.",
-      "Don't use stock or invented food photos. Photos arrive only when the pizzeria supplies its own.",
+      "Don't use stock or invented food photos. Photos arrive only when the café supplies its own.",
       "Don't add a second accent hue or use yellow for anything except placeholder disclosure.",
       "Don't use neutral grey or black shadows, or hard offset shadows.",
       "Don't add uppercase labels, kickers or eyebrows above headings.",

@@ -1,5 +1,5 @@
 ---
-name: Pizzeria (placeholder name)
+name: მაი & Family
 description: Warm, light pickup ordering page in the restaurant-app category standard; menu to WhatsApp order in a few taps.
 colors:
   tomato: "#e4572e"
@@ -122,13 +122,13 @@ components:
     height: "52px"
 ---
 
-# Design System: Pizzeria (placeholder name)
+# Design System: მაი & Family
 
 ## Overview
 
 **Creative North Star: "The Warm Counter"**
 
-This is the restaurant-ordering category standard, built to the finish of a good delivery app and kept warm. Nobody has to learn anything: a tomato header band names the pizzeria, a white venue card overlaps its lower edge with the open status and how to pay, sticky tabs underline the current category, and dish rows carry a round plus button on the right. A floating tomato bar holds the order on phones and opens into a bottom sheet; on desktop the same order stands as a sticky sidebar beside the menu. Convention is the commitment. No metaphor sits on top of it.
+This is the restaurant-ordering category standard, built to the finish of a good delivery app and kept warm. Nobody has to learn anything: a tomato header band names the café, a white venue card overlaps its lower edge with the open status and how to pay, sticky tabs underline the current category, and dish rows carry a round plus button on the right. A floating tomato bar holds the order on phones and opens into a bottom sheet; on desktop the same order stands as a sticky sidebar beside the menu. Convention is the commitment. No metaphor sits on top of it.
 
 The warmth comes from colour, type and shape, not from imagery. The ground is a warm white, text is ink brown rather than black, shadows are tinted brown, and every interactive edge is rounded. Density is moderate: rows breathe at 16px and secondary text drops to a muted brown. The page uses no photos (the user's decision) and must never use stock food photography.
 
@@ -179,7 +179,7 @@ A warm-paper palette: cream and brown neutrals, one tomato accent in three stren
 **Character:** A rounded, friendly grotesque paired with Georgian glyphs of matching weight. Both are self-hosted in 400, 500 and 700. The pairing reads soft and plain and never shouts.
 
 ### Hierarchy
-- **Display** (700, 1.875rem, rising to 2.75rem at 960px and up, 1.1, -0.01em): the pizzeria name in the header band only.
+- **Display** (700, 1.875rem, rising to 2.75rem at 960px and up, 1.1, -0.01em): the café name in the header band only.
 - **Headline** (700, 1.375rem, 1.25): category headings, the info heading, the open sheet's title, the sent confirmation heading.
 - **Title** (500, 1.0625rem, 1.3): dish names, tab labels, prices, order-line names; 700 for the order bar title and total.
 - **Body** (400, 1.0625rem, 1.45): base text. Numerals are tabular everywhere (`font-variant-numeric: tabular-nums`) so prices align.
@@ -267,7 +267,7 @@ On phones, the bar opens into a bottom sheet (max 90dvh, 16px top corners, Sheet
 
 ### Don't:
 - **Don't** bring back the replaced metro world: no navy, no grey ground, no signage capitals.
-- **Don't** use stock or invented food photos. Photos arrive only when the pizzeria supplies its own.
+- **Don't** use stock or invented food photos. Photos arrive only when the café supplies its own.
 - **Don't** add a second accent hue or use yellow for anything except placeholder disclosure.
 - **Don't** use neutral grey or black shadows, or hard offset shadows.
 - **Don't** add uppercase labels, kickers or eyebrows above headings.

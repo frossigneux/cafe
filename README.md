@@ -1,8 +1,8 @@
-# Pizzeria: commande en ligne via WhatsApp
+# მაი & Family (café) : commande en ligne via WhatsApp
 
 Site statique Astro, en trois langues : géorgien (`/`), anglais (`/en/`) et russe (`/ru/`).
 
-- **Menu et réglages** : `content/menu.json` et `content/settings.json`. Le mode d'emploi pour l'équipe de la pizzeria est dans [`content/README.md`](content/README.md), en anglais.
+- **Menu et réglages** : `content/menu.json` et `content/settings.json`. Le mode d'emploi pour l'équipe du café est dans [`content/README.md`](content/README.md), en anglais.
 - **En local** : `npm install`, puis `npm run dev`.
 
 ## Mise en ligne actuelle : GitHub Pages

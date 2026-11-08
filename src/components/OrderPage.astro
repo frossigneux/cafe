@@ -116,7 +116,7 @@ const icon = {
           try {
             // Leave search-engine crawlers on the Georgian page so each language stays indexed.
             if (/bot|crawl|spider|slurp|facebookexternalhit|whatsapp|telegram/i.test(navigator.userAgent)) throw 0;
-            var saved = localStorage.getItem('pizzeria.lang');
+            var saved = localStorage.getItem('cafe.lang');
             var wanted = saved;
             if (!wanted) {
               var prefs = (navigator.languages || [navigator.language || '']).map(function (l) { return l.slice(0, 2).toLowerCase(); });

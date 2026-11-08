@@ -1,13 +1,13 @@
 import raw from '../../content/settings.json';
 import { check, text } from './validate';
 
-// Settings live in content/settings.json so the pizzeria can edit them on GitHub.
+// Settings live in content/settings.json so the café can edit them on GitHub.
 
 const file = 'content/settings.json';
 const s = raw as Record<string, any>;
 const hhmm = /^([01]\d|2[0-3]):[0-5]\d$/;
 
-check(typeof s.name === 'string' && s.name.trim(), file, '"name" must be the pizzeria name in quotes');
+check(typeof s.name === 'string' && s.name.trim(), file, '"name" must be the café name in quotes');
 check(s.showPhoto === undefined || typeof s.showPhoto === 'boolean', file, '"showPhoto" must be true or false, without quotes');
 
 const whatsapp = String(s.whatsapp ?? '').replace(/\D/g, '');

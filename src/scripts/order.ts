@@ -3,8 +3,8 @@ import { t, itemCount, price, type Lang } from '../i18n';
 
 const lang = document.documentElement.lang as Lang;
 const body = document.body;
-const CART_KEY = 'pizzeria.cart';
-const CUSTOMER_KEY = 'pizzeria.customer';
+const CART_KEY = 'cafe.cart';
+const CUSTOMER_KEY = 'cafe.customer';
 
 const store = {
   get<T>(key: string, fallback: T): T {
@@ -450,7 +450,7 @@ clearBtn.addEventListener('click', () => {
 for (const link of $$<HTMLAnchorElement>('.lang a')) {
   link.addEventListener('click', () => {
     try {
-      localStorage.setItem('pizzeria.lang', link.hreflang); // read raw by the inline redirect in <head>
+      localStorage.setItem('cafe.lang', link.hreflang); // read raw by the inline redirect in <head>
     } catch {
       /* private mode: the browser language decides next time */
     }

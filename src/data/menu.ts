@@ -2,7 +2,7 @@ import raw from '../../content/menu.json';
 import { langs } from '../i18n';
 import { check, text, type Text } from './validate';
 
-// The menu lives in content/menu.json so the pizzeria can edit it on GitHub.
+// The menu lives in content/menu.json so the café can edit it on GitHub.
 // Anything malformed stops the build with a message naming the item and the field,
 // so a bad edit never reaches the live site.
 

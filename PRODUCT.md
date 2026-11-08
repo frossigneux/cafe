@@ -8,7 +8,7 @@ web
 
 ## Stack
 
-delegated: Astro. The pages are mostly static (menu, info), so Astro ships them as plain HTML with near-zero JS, which keeps load fast on phones. The cart is the only interactive part and can be a single island that builds a pre-filled WhatsApp message link. With no backend, the whole site can be hosted as static files. Deploy target: GitHub Pages from the public repo frossigneux/cafe for now (https://frossigneux.github.io/cafe/); moving to Cloudflare Pages with a private repo is documented in README.md. The menu and settings live in `content/*.json` so the pizzeria can edit them on github.com; every commit rebuilds the site, and a malformed file fails the build without touching the live site.
+delegated: Astro. The pages are mostly static (menu, info), so Astro ships them as plain HTML with near-zero JS, which keeps load fast on phones. The cart is the only interactive part and can be a single island that builds a pre-filled WhatsApp message link. With no backend, the whole site can be hosted as static files. Deploy target: GitHub Pages from the public repo frossigneux/cafe for now (https://frossigneux.github.io/cafe/); moving to Cloudflare Pages with a private repo is documented in README.md. The menu and settings live in `content/*.json` so the café can edit them on github.com; every commit rebuilds the site, and a malformed file fails the build without touching the live site.
 
 ## Users
 
@@ -24,19 +24,19 @@ Fast and good value: quick service, fair prices, orders ready on time. The produ
 
 ## Capabilities and Constraints
 
-- Core flow: browse menu → build cart → send the order via WhatsApp. The site composes the order, and WhatsApp carries it to the pizzeria. There is no order backend.
+- Core flow: browse menu → build cart → send the order via WhatsApp. The site composes the order, and WhatsApp carries it to the café. There is no order backend.
 - Guest checkout only: no customer accounts.
 - No delivery: customers pick up their order or eat in at the café.
-- Payment: the customer chooses between a bank transfer to the pizzeria's account at TBC or Bank of Georgia (BOG), done from their banking app, and paying at pickup. No card-payment gateway.
+- Payment: the customer chooses between a bank transfer to the café's account at TBC or Bank of Georgia (BOG), done from their banking app, and paying at pickup. No card-payment gateway.
 - Languages: Georgian, English, Russian.
-- No staff/kitchen view in scope. The pizzeria receives and confirms orders in WhatsApp.
+- No staff/kitchen view in scope. The café receives and confirms orders in WhatsApp.
 - Location: Georgia. Prices in GEL (₾).
 - Open decisions: pickup address details, and the BOG/TBC account details (IBAN, account holder).
 
 ## Brand Commitments
 
 - Visual direction (chosen 2026-10-27 after a first "metro line" design felt cold): the category standard for restaurant ordering, warm and light, executed at Wolt's level of finish. Convention is the commitment: no metaphor layered on top.
-- No food photos until the pizzeria supplies its own; never use stock photos.
+- No food photos until the café supplies its own; never use stock photos.
 
 ## Evidence on Hand
 
