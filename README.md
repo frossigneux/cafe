@@ -7,7 +7,7 @@ Site statique Astro, en trois langues : géorgien (`/`), anglais (`/en/`) et rus
 
 ## Mise en ligne actuelle : GitHub Pages
 
-Le site est publié sur https://frossigneux.github.io/pizzeria/ par le workflow `.github/workflows/deploy.yml`, à chaque commit sur `main`. Une erreur dans un fichier JSON fait échouer la compilation, avec un message dans l'onglet **Actions**, et le site en ligne garde la version précédente. Ce mode demande un dépôt public.
+Le site est publié sur https://frossigneux.github.io/cafe/ par le workflow `.github/workflows/deploy.yml`, à chaque commit sur `main`. Une erreur dans un fichier JSON fait échouer la compilation, avec un message dans l'onglet **Actions**, et le site en ligne garde la version précédente. Ce mode demande un dépôt public.
 
 ## Passer plus tard à Cloudflare Pages (dépôt privé possible)
 

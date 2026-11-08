@@ -8,7 +8,7 @@ web
 
 ## Stack
 
-delegated: Astro. The pages are mostly static (menu, info), so Astro ships them as plain HTML with near-zero JS, which keeps load fast on phones. The cart is the only interactive part and can be a single island that builds a pre-filled WhatsApp message link. With no backend, the whole site can be hosted as static files. Deploy target: GitHub Pages from the public repo frossigneux/pizzeria for now (https://frossigneux.github.io/pizzeria/); moving to Cloudflare Pages with a private repo is documented in README.md. The menu and settings live in `content/*.json` so the pizzeria can edit them on github.com; every commit rebuilds the site, and a malformed file fails the build without touching the live site.
+delegated: Astro. The pages are mostly static (menu, info), so Astro ships them as plain HTML with near-zero JS, which keeps load fast on phones. The cart is the only interactive part and can be a single island that builds a pre-filled WhatsApp message link. With no backend, the whole site can be hosted as static files. Deploy target: GitHub Pages from the public repo frossigneux/cafe for now (https://frossigneux.github.io/cafe/); moving to Cloudflare Pages with a private repo is documented in README.md. The menu and settings live in `content/*.json` so the pizzeria can edit them on github.com; every commit rebuilds the site, and a malformed file fails the build without touching the live site.
 
 ## Users
 
