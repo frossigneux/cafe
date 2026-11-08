@@ -31,7 +31,7 @@ Fast and good value: quick service, fair prices, orders ready on time. The produ
 - Languages: Georgian, English, Russian.
 - No staff/kitchen view in scope. The pizzeria receives and confirms orders in WhatsApp.
 - Location: Georgia. Prices in GEL (₾).
-- Open decisions: real opening hours, pickup address text, and the BOG/TBC account details (IBAN, account holder).
+- Open decisions: pickup address details, and the BOG/TBC account details (IBAN, account holder).
 
 ## Brand Commitments
 

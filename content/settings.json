@@ -21,15 +21,15 @@
     },
     "friday": {
       "open": "10:00",
-      "close": "23:00"
+      "close": "22:00"
     },
     "saturday": {
       "open": "10:00",
-      "close": "23:00"
+      "close": "22:00"
     },
     "sunday": {
-      "open": "11:00",
-      "close": "21:00"
+      "open": "10:00",
+      "close": "22:00"
     }
   },
   "address": {
