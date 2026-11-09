@@ -28,6 +28,11 @@ components:
   bank:
     type: object
     fields:
+      - name: enabled
+        label: ჩართულია · Enabled
+        description: 'გამორთული = ეს გადარიცხვა საიტზე არ ჩანს · Off = this transfer option is not offered on the site.'
+        type: boolean
+        default: true
       - { name: iban, label: IBAN, type: string }
       - { name: holder, label: ანგარიშის მფლობელი · Account holder, type: string }
 

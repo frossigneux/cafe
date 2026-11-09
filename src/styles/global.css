@@ -1099,6 +1099,11 @@ svg.brand {
   margin-bottom: 6px;
 }
 
+.pay-only {
+  margin: 0;
+  color: var(--ink);
+}
+
 .pay-opt {
   display: flex;
   align-items: center;

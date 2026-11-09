@@ -41,9 +41,13 @@ const week: DayHours[] = weekdays.map((day) => {
 });
 check(week.some(Boolean), file, '"openingHours": at least one day must be open');
 
+// Each bank can be switched off with "enabled": false (paying at the café always works).
+const bankOn = (bank: 'bog' | 'tbc') => s.bankAccounts?.[bank]?.enabled !== false;
 for (const bank of ['bog', 'tbc'] as const) {
   const acc = s.bankAccounts?.[bank];
-  check(acc && typeof acc.iban === 'string' && /^GE\d{2}[A-Z]{2}\d{16}$/.test(acc.iban.replace(/\s/g, '')), file, `"bankAccounts" → "${bank}" → "iban" must be a Georgian IBAN, e.g. "GE29 BG00 0000 0000 0000 00"`);
+  check(blank(acc?.enabled) || typeof acc.enabled === 'boolean', file, `"bankAccounts" → "${bank}" → "enabled" must be true or false, without quotes`);
+  if (!bankOn(bank)) continue;
+  check(acc && typeof acc.iban === 'string' && /^GE\d{2}[A-Z]{2}\d{16}$/.test(acc.iban.replace(/\s/g, '')), file, `"bankAccounts" → "${bank}" → "iban" must be a Georgian IBAN, e.g. "GE29 BG00 0000 0000 0000 00" (or switch the bank off with "enabled": false)`);
   check(typeof acc.holder === 'string' && acc.holder.trim(), file, `"bankAccounts" → "${bank}" → "holder" must be the account holder's name`);
 }
 
@@ -69,10 +73,13 @@ export const config = {
   phoneDisplay: String(s.whatsapp).trim(),
   facebook: blank(s.facebook) ? null : (s.facebook as string),
   mapUrl: loc ? `https://www.google.com/maps/search/?api=1&query=${loc.lat},${loc.lng}` : null,
-  banks: {
-    bog: { iban: s.bankAccounts.bog.iban.replace(/\s/g, '') as string, holder: s.bankAccounts.bog.holder as string },
-    tbc: { iban: s.bankAccounts.tbc.iban.replace(/\s/g, '') as string, holder: s.bankAccounts.tbc.holder as string },
-  },
+  // Only the banks switched on, BOG first.
+  banks: Object.fromEntries(
+    (['bog', 'tbc'] as const)
+      .filter(bankOn)
+      .map((b) => [b, { iban: s.bankAccounts[b].iban.replace(/\s/g, '') as string, holder: s.bankAccounts[b].holder as string }]),
+  ) as Partial<Record<'bog' | 'tbc', { iban: string; holder: string }>>,
 };
 
-export type BankId = keyof typeof config.banks;
+export type BankId = 'bog' | 'tbc';
+export const bankIds = Object.keys(config.banks) as BankId[];

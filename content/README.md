@@ -69,7 +69,7 @@ If you made a mistake, a red cross appears instead. Click it, then **Details**: 
 - `"facebook"`: link to the Facebook page, shown in the Info section. Remove the line to hide it.
 - `"location"`: the pickup point on the map, as `{ "lat": 41.91935, "lng": 44.727734 }`. In Google Maps, right-click the place and click the coordinates to copy them. Remove the line to hide the map link.
 - `"openingHours"`: one line per day (`monday` … `sunday`), 24-hour clock, Tbilisi time, e.g. `"friday": { "open": "10:00", "close": "23:00" }`. For a day off, add `"closed": true` to that day (or write `"sunday": "closed"`). Closing after midnight is not supported.
-- `"bankAccounts"`: IBAN and account holder for Bank of Georgia (`bog`) and TBC (`tbc`). Spaces in the IBAN are fine.
+- `"bankAccounts"`: IBAN and account holder for Bank of Georgia (`bog`) and TBC (`tbc`). Spaces in the IBAN are fine. Set `"enabled": false` to stop offering that transfer (the site then only mentions the other bank, or just paying at the café by card or cash).
 - `"gallery"`: the pictures at the top of the page, each as `{ "image": "/photos/cafe.jpg", "alt": { "ka": "…", "en": "…", "ru": "…" } }`. The first one shows first (and on links shared on social networks), the others when swiping. `"alt"` describes the picture for blind visitors. An empty list `[]` shows no picture.
 
 ## Rules of JSON, in short

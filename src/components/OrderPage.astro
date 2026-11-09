@@ -9,7 +9,7 @@ import '../styles/global.css';
 import { Image, getImage } from 'astro:assets';
 import type { ImageMetadata } from 'astro';
 import { siFacebook, siWhatsapp } from 'simple-icons';
-import { config, weekdays } from '../data/config';
+import { bankIds, config, weekdays } from '../data/config';
 import { menu } from '../data/menu';
 import { langs, langLabel, langPath, t, price, type Lang } from '../i18n';
 
@@ -42,6 +42,11 @@ const zoomUrl: Record<string, string> = Object.fromEntries(
   ),
 );
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+// "Pay at the café by card or cash", plus the transfer banks that are switched on.
+const bankShort = { bog: 'BOG', tbc: 'TBC' } as const;
+const payLine = bankIds.length
+  ? t(lang, 'payLineTransfer', { banks: bankIds.map((b) => bankShort[b]).join(t(lang, 'bankJoin')) })
+  : t(lang, 'payLine');
 const pageTitle = `${config.name} · ${t(lang, 'title')}`;
 const canonical = new URL(langPath[lang], site).href;
 const ogImage = new URL(`${base}og.jpg`, site).href;
@@ -192,7 +197,7 @@ const icon = {
           )
         }
       </p>
-      <p class="venue-pay">{t(lang, 'payLine')}</p>
+      <p class="venue-pay">{payLine}</p>
       </div>
     </section>
 
@@ -291,7 +296,7 @@ const icon = {
             </div>
             <div>
               <dt>{t(lang, 'payment')}</dt>
-              <dd>{t(lang, 'payLine')}</dd>
+              <dd>{payLine}</dd>
             </div>
             <div>
               <dt>{t(lang, 'contact')}</dt>
@@ -364,25 +369,33 @@ const icon = {
               </select>
             </label>
 
-            <fieldset class="field pay">
-              <legend class="field-label">{t(lang, 'payment')}</legend>
-              <label class="pay-opt"><input type="radio" name="pay" value="pickup" checked /><span>{t(lang, 'payPickup')}</span></label>
-              <label class="pay-opt"><input type="radio" name="pay" value="bog" /><span>{t(lang, 'payBog')}</span></label>
-              <label class="pay-opt"><input type="radio" name="pay" value="tbc" /><span>{t(lang, 'payTbc')}</span></label>
-            </fieldset>
+            {bankIds.length > 0 ? (
+              <fieldset class="field pay">
+                <legend class="field-label">{t(lang, 'payment')}</legend>
+                <label class="pay-opt"><input type="radio" name="pay" value="pickup" checked /><span>{t(lang, 'payPickup')}</span></label>
+                {bankIds.map((b) => (
+                  <label class="pay-opt"><input type="radio" name="pay" value={b} /><span>{t(lang, b === 'bog' ? 'payBog' : 'payTbc')}</span></label>
+                ))}
+              </fieldset>
+            ) : (
+              <div class="field">
+                <span class="field-label">{t(lang, 'payment')}</span>
+                <p class="pay-only">{t(lang, 'payPickup')}</p>
+              </div>
+            )}
 
             <div class="bank" data-bank hidden>
               <p class="bank-hint">{t(lang, 'transferHint')}</p>
               {
-                (['bog', 'tbc'] as const).map((b) => (
+                bankIds.map((b) => (
                   <div class="bank-acc" data-bank-acc={b} hidden>
                     <span class="bank-iban">
-                      {groups(config.banks[b].iban).map((g) => <span>{g}</span>)}
+                      {groups(config.banks[b]!.iban).map((g) => <span>{g}</span>)}
                     </span>
                     <span class="bank-holder">
-                      {t(lang, 'holder')}: {config.banks[b].holder}
+                      {t(lang, 'holder')}: {config.banks[b]!.holder}
                     </span>
-                    <button class="copy" type="button" data-copy={config.banks[b].iban} data-copied={t(lang, 'copied')}>
+                    <button class="copy" type="button" data-copy={config.banks[b]!.iban} data-copied={t(lang, 'copied')}>
                       <svg viewBox="0 0 20 20" aria-hidden="true" set:html={icon.copy} />
                       <span>{t(lang, 'copy')}</span>
                     </button>

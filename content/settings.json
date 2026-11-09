@@ -61,10 +61,12 @@
   "facebook": "https://www.facebook.com/share/1FirPqmoLS/",
   "bankAccounts": {
     "bog": {
+      "enabled": true,
       "iban": "GE00BG0000000000000000",
       "holder": "Account holder to come"
     },
     "tbc": {
+      "enabled": true,
       "iban": "GE00TB0000000000000000",
       "holder": "Account holder to come"
     }
