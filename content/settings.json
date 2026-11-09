@@ -21,30 +21,37 @@
   "whatsapp": "+995 593 62 80 90",
   "openingHours": {
     "monday": {
+      "closed": false,
       "open": "10:00",
       "close": "22:00"
     },
     "tuesday": {
+      "closed": false,
       "open": "10:00",
       "close": "22:00"
     },
     "wednesday": {
+      "closed": false,
       "open": "10:00",
       "close": "22:00"
     },
     "thursday": {
+      "closed": false,
       "open": "10:00",
       "close": "22:00"
     },
     "friday": {
+      "closed": false,
       "open": "10:00",
       "close": "22:00"
     },
     "saturday": {
+      "closed": false,
       "open": "10:00",
       "close": "22:00"
     },
     "sunday": {
+      "closed": false,
       "open": "10:00",
       "close": "22:00"
     }
@@ -61,12 +68,12 @@
   "facebook": "https://www.facebook.com/share/1FirPqmoLS/",
   "bankAccounts": {
     "bog": {
-      "enabled": true,
+      "enabled": false,
       "iban": "GE00BG0000000000000000",
       "holder": "Account holder to come"
     },
     "tbc": {
-      "enabled": true,
+      "enabled": false,
       "iban": "GE00TB0000000000000000",
       "holder": "Account holder to come"
     }
