@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>მაი & Family — Website management guide</title>
+<style>
+  @page { size: A4; margin: 16mm 15mm 18mm; }
+  :root { --tomato: #c43f1a; --ink: #2b211b; --ink-2: #6e5f53; --line: #eadfd3; --soft: #fbf3ea; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: "Noto Sans", "Noto Sans Georgian", sans-serif; color: var(--ink); font-size: 10.5pt; line-height: 1.5; }
+  h1 { font-size: 26pt; line-height: 1.15; margin: 0 0 6pt; color: var(--tomato); }
+  h2 { font-size: 15pt; margin: 0 0 8pt; padding-bottom: 4pt; border-bottom: 2px solid var(--tomato); break-after: avoid; }
+  h3 { font-size: 11.5pt; margin: 12pt 0 4pt; break-after: avoid; }
+  p { margin: 0 0 6pt; }
+  ul, ol { margin: 0 0 6pt; padding-left: 16pt; }
+  li { margin-bottom: 2pt; }
+  section { break-before: page; }
+  .cover { min-height: 250mm; display: flex; flex-direction: column; justify-content: center; }
+  .cover .sub { font-size: 15pt; margin-bottom: 18pt; }
+  .cover .sub span { display: block; color: var(--ink-2); font-size: 12pt; }
+  table { width: 100%; border-collapse: collapse; margin: 4pt 0 8pt; font-size: 9.5pt; break-inside: avoid; }
+  th, td { text-align: left; vertical-align: top; padding: 4pt 6pt; border-bottom: 1px solid var(--line); }
+  th { background: var(--soft); }
+  code { font-family: "DejaVu Sans Mono", monospace; font-size: 8.8pt; background: #f3ece4; padding: 0 3pt; border-radius: 3px; }
+  pre { font-family: "DejaVu Sans Mono", monospace; font-size: 8.5pt; background: #f3ece4; padding: 6pt 8pt; border-radius: 4px; white-space: pre-wrap; margin: 4pt 0 8pt; }
+  figure { margin: 6pt 0 10pt; break-inside: avoid; }
+  figure img { display: block; max-width: 100%; max-height: 105mm; border: 1px solid var(--line); border-radius: 4px; }
+  figcaption { font-size: 8.5pt; color: var(--ink-2); margin-top: 3pt; }
+  .note { padding: 6pt 9pt; border: 1px solid #f0c9b8; background: #fdf1eb; border-radius: 4px; margin: 6pt 0 8pt; break-inside: avoid; }
+  .blank { display: inline-block; min-width: 55mm; border-bottom: 1px solid var(--ink-2); }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 10pt; align-items: start; }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <h1>მაი & Family</h1>
+  <p class="sub">Website management guide</p>
+  <table>
+    <tr><th>Website</th><td>https://frossigneux.github.io/cafe/ <br><small>(once a domain is connected: https://<span class="blank"></span>)</small></td></tr>
+    <tr><th>Editing</th><td>https://app.pagescms.org</td></tr>
+    <tr><th>Code and data</th><td>https://github.com/frossigneux/cafe</td></tr>
+    <tr><th>WhatsApp (orders)</th><td>+995 593 62 80 90</td></tr>
+    <tr><th>Version</th><td>2026-11-09</td></tr>
+  </table>
+  <p style="margin-top:14pt;color:var(--ink-2)">Parts 1–6 are for the café staff, parts 7–9 for a technician taking over the site. Georgian version: guide-ka.pdf.</p>
+</div>
+
+<section>
+  <h2>1. How the site works</h2>
+  
+
+    <ol>
+      <li>Visitors pick dishes on the site and tap “Send on WhatsApp”. The order arrives as a ready-made message on the café's WhatsApp number. There is no online payment on the site.</li>
+      <li>The menu, prices, photos and settings are stored on GitHub in <code>content/menu.json</code>, <code>content/settings.json</code> and <code>content/photos/</code>.</li>
+      <li>These files are edited with <b>Pages CMS</b> (app.pagescms.org): forms labelled in Georgian and English, no programming needed.</li>
+      <li>Every “Save” creates a commit on GitHub. GitHub checks the data and publishes the updated site within about 2 minutes.</li>
+      <li>If the data has a mistake, publishing stops and the previous version stays online, so customers never see a broken site.</li>
+    </ol>
+    <h3>Accounts</h3>
+  <table>
+    <tr><th>Service</th><th>What for</th><th>Owner</th></tr>
+    <tr><td>GitHub</td><td>Code, data, publishing</td><td>frossigneux</td></tr>
+    <tr><td>Pages CMS</td><td>Editing the menu and settings</td><td>Via GitHub or email invite</td></tr>
+    <tr><td>Worldbus.ge</td><td>Domain name (.ge)</td><td><span class="blank"></span></td></tr>
+    <tr><td>Google Business</td><td>Google Maps and Search listing</td><td><span class="blank"></span></td></tr>
+    <tr><td>Facebook</td><td>Café page</td><td><span class="blank"></span></td></tr>
+  </table>
+</section>
+<section>
+  <h2>2. Signing in and inviting staff</h2>
+  
+
+    <h3>Owner (GitHub account)</h3>
+    <p> open app.pagescms.org, click <b>Sign in with GitHub</b>. The first time, allow the Pages CMS app on the <code>frossigneux/cafe</code> repository (it can be limited to that one). Open the <b>cafe</b> project: the left bar shows Menu, Settings and Media.</p>
+    <h3>Staff (no GitHub account)</h3>
+    <p> the owner goes to <b>Admin → Collaborators → Invite a collaborator</b> and enters their email. They receive a sign-in link by email; no password is needed. Afterwards they sign in at app.pagescms.org with the same email.</p>
+  </section>
+<section>
+  <h2>3. Editing the menu</h2>
+  <figure><img src="img/menu-list.png" alt="" style="max-height:55mm"><figcaption>Menu: კატეგორიების სია · the list of categories</figcaption></figure>
+  <figure><img src="img/category.png" alt="" style="max-height:78mm"><figcaption>A category: name in three languages, “Can be ordered online”, its dishes</figcaption></figure>
+
+    <ul>
+      <li><b>Open</b> a category (›), then a dish. <b>Expand all</b> opens everything.</li>
+      <li><b>Reorder</b> by dragging the ⠿ handle; the site follows the same order.</li>
+      <li><b>Add</b> with <b>Add an item</b> at the end of a list. <b>Delete</b> with the bin icon; prefer “Hidden” (below) so the dish can come back later.</li>
+      <li><b>Always finish with Save</b> (top right, green).</li>
+      <li><b>Can be ordered online</b> (category): off for coffee and tea, which are served at the café only. Their prices show for information, without the + button.</li>
+    </ul>
+  </section>
+<section>
+  <h2>3. Dish fields (continued)</h2>
+  <figure><img src="img/dish.png" alt=""><figcaption>A dish: price, promo, photo, switches</figcaption></figure>
+
+    <ul>
+      <li><b>Name / Description:</b> in Georgian, English and Russian. An empty language falls back to English.</li>
+      <li><b>Price:</b> a plain number without ₾, e.g. <code>22</code> or <code>3.5</code>.</li>
+      <li><b>Promo price:</b> lower than the price. The site strikes through the normal price and shows a “Promo” tag. Empty means no promo.</li>
+      <li><b>Photo:</b> upload from phone or computer. Landscape, about 600×480, works best.</li>
+      <li><b>Available:</b> off means temporarily unavailable (greyed out, cannot be ordered).</li>
+      <li><b>Hidden:</b> on removes the dish from the site but keeps it in the list for later.</li>
+      <li><b>Technical id:</b> leave it as it is.</li>
+    </ul>
+  </section>
+<section>
+  <h2>4. Settings</h2>
+  <div class="two"><figure><img src="img/settings.png" alt=""><figcaption>Settings: name, top pictures, WhatsApp, hours</figcaption></figure>
+  <figure><img src="img/banks.png" alt=""><figcaption>Each bank has its own switch</figcaption></figure></div>
+
+    <ul>
+      <li><b>Café name:</b> site title and the social sharing image.</li>
+      <li><b>Pictures at the top:</b> the first shows first, the others on swipe. The first is also used when the link is shared on Facebook or WhatsApp. Give each a short description for blind visitors.</li>
+      <li><b>WhatsApp number:</b> where orders arrive, with country code.</li>
+      <li><b>Opening hours:</b> per day, Tbilisi time, 24-hour clock. Day off: switch on “Closed all day”. Closing after midnight is not supported.</li>
+      <li><b>Address, map pin</b> (two numbers from Google Maps), <b>Facebook link</b>.</li>
+      <li><b>Bank accounts:</b> paying at the café (card or cash) is always offered. The <b>Enabled</b> switch shows or hides the BOG or TBC transfer option; the site texts adapt by themselves. An enabled bank needs a valid Georgian IBAN and the account holder's name, which customers see and copy.</li>
+    </ul>
+  </section>
+<section>
+  <h2>5. After saving</h2>
+  
+
+    <ul>
+      <li>The site updates within about <b>2 minutes</b>; check on a phone and reload if needed.</li>
+      <li>History: the clock icon at the top right lists every change, who made it and when.</li>
+      <li><b>If nothing changed after 5 minutes</b>, the data probably has a mistake (e.g. promo price above the price, or a wrong IBAN). The previous version stays online. Open <b>Admin → Actions</b> in Pages CMS, or the <b>Actions</b> tab on GitHub: red ✗ → <b>build</b>; the end of the log says what to fix and where. Fix it and Save again.</li>
+      <li>Avoid two people editing the same page at the same time.</li>
+    </ul>
+  </section>
+<section>
+  <h2>6. Photos and good practice</h2>
+  
+
+    <ul>
+      <li>Photos: landscape, bright, dish in the centre. JPG, PNG or WebP; the site resizes them.</li>
+      <li>One photo can serve several dishes (all khinkali share one).</li>
+      <li>When a price changes, update the site, the printed menu and Google.</li>
+      <li>Keep opening hours identical on the site, Google Business and Facebook.</li>
+      <li>Orders arrive on WhatsApp: confirm each one to the customer there, as the order message asks.</li>
+    </ul>
+  </section>
+<section>
+  <h2>7. For a technician</h2>
+  
+
+    <p>Static site built with <b>Astro 6</b> (Node 22), no server and no database. On every push to <code>main</code>, <code>.github/workflows/deploy.yml</code> builds it and publishes to <b>GitHub Pages</b>. Repository: <code>github.com/frossigneux/cafe</code>.</p>
+    <table>
+      <tr><th>Path</th><th>Role</th></tr>
+      <tr><td><code>content/menu.json</code>, <code>content/settings.json</code></td><td>All café data. Validated at build time (<code>src/data/*.ts</code>); a mistake fails the build with a readable message.</td></tr>
+      <tr><td><code>content/photos/</code></td><td>Dish and gallery photos, referenced as <code>/photos/x.jpg</code>.</td></tr>
+      <tr><td><code>.pages.yml</code></td><td>Pages CMS form definition (bilingual labels).</td></tr>
+      <tr><td><code>content/README.md</code></td><td>How to edit the JSON directly on GitHub.</td></tr>
+      <tr><td><code>src/i18n.ts</code></td><td>Interface texts in ka / en / ru, and the WhatsApp message wording.</td></tr>
+      <tr><td><code>src/components/OrderPage.astro</code>, <code>src/scripts/order.ts</code>, <code>src/styles/global.css</code></td><td>Page, cart and WhatsApp logic, styles.</td></tr>
+      <tr><td><code>scripts/make-og.py</code></td><td>Builds <code>public/og.jpg</code> (social image) in CI from the name and first gallery picture.</td></tr>
+      <tr><td><code>docs/guide/</code></td><td>This guide (HTML, PDF, screenshots).</td></tr>
+      <tr><td><code>DESIGN.md</code>, <code>PRODUCT.md</code></td><td>Design system and product decisions.</td></tr>
+    </table>
+    <h3>Local work</h3>
+<pre>git clone git@github.com:frossigneux/cafe.git && cd cafe
+npm ci
+npm run dev      # http://localhost:4321
+npm run build    # same check as the publish workflow</pre>
+    <p><b>Always <code>git pull</code> first:</b> staff edits in Pages CMS are commits on <code>main</code>.</p>
+    <h3>Pages CMS notes</h3>
+    <ul>
+      <li>Pages CMS only keeps the fields declared in <code>.pages.yml</code>. Any new JSON key must be added there too, or it will be dropped on the next save.</li>
+      <li>Empty fields are saved as <code>""</code> or <code>null</code>; the loaders treat them as absent.</li>
+      <li>After changing <code>.pages.yml</code>, open the form and check the change. If Pages CMS still shows the old form, push another small change to <code>.pages.yml</code> (a comment): it refreshes its cached copy on GitHub's push notification.</li>
+    </ul>
+  </section>
+<section>
+  <h2>8. Domain at Worldbus.ge</h2>
+  
+
+    <ol>
+      <li>Register the domain at <b>worldbus.ge</b> (Domains), and note the account email: <span class="blank"></span>. Renew it every year, or the address stops working.</li>
+      <li>In the Worldbus DNS panel (default nameservers <code>ns1.worldbus.ge</code> / <code>ns2.worldbus.ge</code>), create:
+<pre>@    A      185.199.108.153
+@    A      185.199.109.153
+@    A      185.199.110.153
+@    A      185.199.111.153
+www  CNAME  frossigneux.github.io.</pre></li>
+      <li>On GitHub: repository <b>Settings → Pages → Custom domain</b>, enter the domain, save, wait for the DNS check, then tick <b>Enforce HTTPS</b>. No <code>CNAME</code> file is needed with the Actions deployment.</li>
+      <li>Re-run the publish workflow (Actions → Publish site → Run workflow). The build reads the site address from GitHub Pages, so links, sitemap and sharing tags switch to the new domain and the <code>/cafe/</code> prefix disappears by itself.</li>
+      <li>Update the link on Google Business, Facebook and printed material.</li>
+    </ol>
+    <p>Alternative hosting (private repository, Cloudflare Pages) is described in the repository <code>README.md</code>.</p>
+  </section>
+<section>
+  <h2>9. Google Business Profile</h2>
+  
+
+    <ol>
+      <li>Open <b>business.google.com</b> with the café's own Google account (not a personal one). Account: <span class="blank"></span></li>
+      <li>Name <b>მაი & Family</b>; category Café (plus Pizza restaurant); address Natakhtari village, with the pin on the exact spot (site coordinates: 41.91935, 44.727734).</li>
+      <li>Phone +995 593 62 80 90, website link, opening hours identical to the site.</li>
+      <li>Verification: Google offers a video, call or postcard; follow its steps.</li>
+      <li>Add photos (front, interior, dishes) and extra managers (Settings → People and access), so access is never tied to a single person.</li>
+      <li>The site already publishes structured data (JSON-LD <code>CafeOrCoffeeShop</code>: name, address, coordinates, hours, Facebook) that helps Google match the listing.</li>
+    </ol>
+  </section>
+
+</body>
+</html>

@@ -4,6 +4,7 @@ Site statique Astro, en trois langues : géorgien (`/`), anglais (`/en/`) et rus
 
 - **Menu et réglages** : `content/menu.json` et `content/settings.json`. Le mode d'emploi pour l'équipe du café est dans [`content/README.md`](content/README.md), en anglais.
 - **Pages CMS** : [`.pages.yml`](.pages.yml) décrit les formulaires de [app.pagescms.org](https://app.pagescms.org) pour ces deux fichiers ; les photos envoyées vont dans `content/photos/`. Pour y accéder : se connecter avec GitHub sur app.pagescms.org et installer l'application Pages CMS sur ce dépôt. D'autres personnes peuvent ensuite être invitées depuis Pages CMS.
+- **Guide d'utilisation** : [`docs/guide/`](docs/guide/) — PDF en géorgien et en anglais (Pages CMS, GitHub, domaine Worldbus.ge, Google Business).
 - **Image de partage** (`public/og.jpg`) : recréée à chaque publication par `scripts/make-og.py` (nom du café + première image de la galerie).
 - **En local** : `npm install`, puis `npm run dev`.
 

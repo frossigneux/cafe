@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="ka">
+<head>
+<meta charset="utf-8">
+<title>მაი & Family — საიტის მართვის გზამკვლევი</title>
+<style>
+  @page { size: A4; margin: 16mm 15mm 18mm; }
+  :root { --tomato: #c43f1a; --ink: #2b211b; --ink-2: #6e5f53; --line: #eadfd3; --soft: #fbf3ea; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: "Noto Sans Georgian", "Noto Sans", sans-serif; color: var(--ink); font-size: 10.5pt; line-height: 1.5; }
+  h1 { font-size: 26pt; line-height: 1.15; margin: 0 0 6pt; color: var(--tomato); }
+  h2 { font-size: 15pt; margin: 0 0 8pt; padding-bottom: 4pt; border-bottom: 2px solid var(--tomato); break-after: avoid; }
+  h3 { font-size: 11.5pt; margin: 12pt 0 4pt; break-after: avoid; }
+  p { margin: 0 0 6pt; }
+  ul, ol { margin: 0 0 6pt; padding-left: 16pt; }
+  li { margin-bottom: 2pt; }
+  section { break-before: page; }
+  .cover { min-height: 250mm; display: flex; flex-direction: column; justify-content: center; }
+  .cover .sub { font-size: 15pt; margin-bottom: 18pt; }
+  .cover .sub span { display: block; color: var(--ink-2); font-size: 12pt; }
+  table { width: 100%; border-collapse: collapse; margin: 4pt 0 8pt; font-size: 9.5pt; break-inside: avoid; }
+  th, td { text-align: left; vertical-align: top; padding: 4pt 6pt; border-bottom: 1px solid var(--line); }
+  th { background: var(--soft); }
+  code { font-family: "DejaVu Sans Mono", monospace; font-size: 8.8pt; background: #f3ece4; padding: 0 3pt; border-radius: 3px; }
+  pre { font-family: "DejaVu Sans Mono", monospace; font-size: 8.5pt; background: #f3ece4; padding: 6pt 8pt; border-radius: 4px; white-space: pre-wrap; margin: 4pt 0 8pt; }
+  figure { margin: 6pt 0 10pt; break-inside: avoid; }
+  figure img { display: block; max-width: 100%; max-height: 105mm; border: 1px solid var(--line); border-radius: 4px; }
+  figcaption { font-size: 8.5pt; color: var(--ink-2); margin-top: 3pt; }
+  .note { padding: 6pt 9pt; border: 1px solid #f0c9b8; background: #fdf1eb; border-radius: 4px; margin: 6pt 0 8pt; break-inside: avoid; }
+  .blank { display: inline-block; min-width: 55mm; border-bottom: 1px solid var(--ink-2); }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 10pt; align-items: start; }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <h1>მაი & Family</h1>
+  <p class="sub">საიტის მართვის გზამკვლევი</p>
+  <table>
+    <tr><th>საიტი</th><td>https://frossigneux.github.io/cafe/ <br><small>(საკუთარი დომენის შემდეგ: https://<span class="blank"></span>)</small></td></tr>
+    <tr><th>რედაქტირება</th><td>https://app.pagescms.org</td></tr>
+    <tr><th>კოდი და მონაცემები</th><td>https://github.com/frossigneux/cafe</td></tr>
+    <tr><th>WhatsApp (შეკვეთები)</th><td>+995 593 62 80 90</td></tr>
+    <tr><th>ვერსია</th><td>2026-11-09</td></tr>
+  </table>
+  <p style="margin-top:14pt;color:var(--ink-2)">ნაწილები 1–6 კაფის თანამშრომლებისთვისაა, ნაწილები 7–9 — ტექნიკური სპეციალისტისთვის. ინგლისური ვერსია: guide-en.pdf.</p>
+</div>
+
+<section>
+  <h2>1. როგორ მუშაობს საიტი</h2>
+  <ol>
+    <li>სტუმარი საიტზე ირჩევს კერძებს და აჭერს „WhatsApp-ით გაგზავნას“. შეკვეთა მზა ტექსტად მოდის კაფის WhatsApp ნომერზე. ონლაინ გადახდა საიტზე არ ხდება.</li>
+    <li>მენიუ, ფასები, ფოტოები და პარამეტრები ინახება GitHub-ზე, ფაილებში <code>content/menu.json</code> და <code>content/settings.json</code>, ფოტოები — <code>content/photos/</code>-ში.</li>
+    <li>ამ ფაილებს ვარედაქტირებთ <b>Pages CMS</b>-ით (app.pagescms.org): ფორმები ქართულ და ინგლისურ ენებზე, პროგრამირების გარეშე.</li>
+    <li>ყოველი „Save“ GitHub-ზე ქმნის ჩანაწერს (commit). GitHub ავტომატურად ამოწმებს მონაცემებს და დაახლოებით 2 წუთში აქვეყნებს განახლებულ საიტს.</li>
+    <li>თუ მონაცემებში შეცდომაა, გამოქვეყნება ჩერდება და საიტზე რჩება წინა ვერსია — მომხმარებლები გაფუჭებულ საიტს ვერ დაინახავენ.</li>
+  </ol>
+  <h3>ანგარიშები</h3>
+  <table>
+    <tr><th>სერვისი</th><th>რისთვის</th><th>ვისი ანგარიში</th></tr>
+    <tr><td>GitHub</td><td>კოდი, მონაცემები, საიტის გამოქვეყნება</td><td>frossigneux</td></tr>
+    <tr><td>Pages CMS</td><td>მენიუს და პარამეტრების რედაქტირება</td><td>GitHub-ით ან ელფოსტის მოწვევით</td></tr>
+    <tr><td>Worldbus.ge</td><td>დომენი (.ge)</td><td><span class="blank"></span></td></tr>
+    <tr><td>Google Business</td><td>Google Maps და ძიება</td><td><span class="blank"></span></td></tr>
+    <tr><td>Facebook</td><td>კაფის გვერდი</td><td><span class="blank"></span></td></tr>
+  </table>
+  </section>
+
+<section>
+  <h2>2. შესვლა და თანამშრომლების მოწვევა</h2>
+  <h3>მფლობელი (GitHub ანგარიშით)</h3>
+  <ol>
+    <li>გახსენით <b>app.pagescms.org</b> და დააჭირეთ <b>Sign in with GitHub</b>.</li>
+    <li>პირველად: დაუშვით Pages CMS აპლიკაცია რეპოზიტორიაზე <code>frossigneux/cafe</code> (შეიძლება მხოლოდ ამ ერთზე).</li>
+    <li>აირჩიეთ პროექტი <b>cafe</b>. მარცხნივ ჩანს: <b>მენიუ · Menu</b>, <b>პარამეტრები · Settings</b>, <b>Media</b>.</li>
+  </ol>
+  <h3>თანამშრომლები (GitHub-ის გარეშე)</h3>
+  <ol>
+    <li>მფლობელი: მარცხნივ <b>Admin → Collaborators → Invite a collaborator</b>, შეიყვანეთ თანამშრომლის ელფოსტა.</li>
+    <li>თანამშრომელი იღებს წერილს ბმულით. ბმულით შედის Pages CMS-ში, პაროლი არ სჭირდება.</li>
+    <li>შემდეგ ყოველთვის: app.pagescms.org → შესვლა იმავე ელფოსტით.</li>
+  </ol>
+  </section>
+
+<section>
+  <h2>3. მენიუს რედაქტირება</h2>
+  <figure><img src="img/menu-list.png" alt="" style="max-height:55mm"><figcaption>მენიუ</figcaption></figure>
+  <ul>
+    <li><b>გახსნა:</b> დააჭირეთ კატეგორიას (›), შემდეგ კერძს. <b>Expand all</b> ყველაფერს ერთად ხსნის.</li>
+    <li><b>რიგის შეცვლა:</b> გადაათრიეთ ⠿ ნიშნით. საიტზე იგივე რიგით ჩანს.</li>
+    <li><b>დამატება:</b> <b>Add an item</b> სიის ბოლოში. <b>წაშლა:</b> ნაგვის ყუთის ხატულა (🗑). უკეთესია „დამალული“ (იხ. ქვემოთ), რომ კერძი მოგვიანებით დაბრუნდეს.</li>
+    <li><b>ბოლოს ყოველთვის: Save</b> (ზემოთ მარჯვნივ, მწვანე).</li>
+  </ul>
+  <figure><img src="img/category.png" alt="" style="max-height:78mm"><figcaption>კატეგორია: სახელი სამ ენაზე, „ონლაინ შეკვეთა“, კერძების სია</figcaption></figure>
+  </section>
+
+<section>
+  <h2>3. კერძის ველები (გაგრძელება)</h2>
+  <div class="two">
+    <figure><img src="img/dish.png" alt=""><figcaption>კერძი: ფასი, აქცია, ფოტო, გადამრთველები</figcaption></figure>
+    <table>
+      <tr><th>ველი</th><th>მნიშვნელობა</th></tr>
+      <tr><td>სახელი / აღწერა</td><td>სამ ენაზე: ქართული, ინგლისური, რუსული. თუ ენა ცარიელია, საიტი ინგლისურს აჩვენებს.</td></tr>
+      <tr><td>ფასი</td><td>მხოლოდ რიცხვი, ₾-ს გარეშე: <code>22</code> ან <code>3.5</code>.</td></tr>
+      <tr><td>აქციის ფასი</td><td>ფასზე ნაკლები. საიტზე ძველი ფასი გადახაზულია, ჩანს „Promo“. ცარიელი = აქცია არ არის.</td></tr>
+      <tr><td>ფოტო</td><td>ატვირთეთ ტელეფონიდან ან კომპიუტერიდან. ჰორიზონტალური, დაახლ. 600×480.</td></tr>
+      <tr><td>ხელმისაწვდომია</td><td>გამორთული = დროებით არ არის (ნაცრისფერი, შეკვეთა შეუძლებელია).</td></tr>
+      <tr><td>დამალული</td><td>ჩართული = საიტიდან ქრება, მაგრამ აქ რჩება.</td></tr>
+      <tr><td>ტექნიკური id</td><td>არ შეცვალოთ.</td></tr>
+    </table>
+  </div>
+  </section>
+
+<section>
+  <h2>4. პარამეტრები</h2>
+  <div class="two">
+    <figure><img src="img/settings.png" alt=""><figcaption>პარამეტრები: სახელი, ზედა სურათები, WhatsApp, საათები</figcaption></figure>
+    <div>
+      <ul>
+        <li><b>კაფეს სახელი</b> — საიტის სათაური და გაზიარების სურათი.</li>
+        <li><b>ზედა სურათები</b> — პირველი ჩანს პირველად, დანარჩენი გადაფურცვლით. პირველი გამოიყენება Facebook/WhatsApp-ზე ბმულის გაზიარებისას. ყოველ სურათს ჰქონდეს მოკლე აღწერა (უსინათლოებისთვის).</li>
+        <li><b>WhatsApp-ის ნომერი</b> — აქ მოდის შეკვეთები. ქვეყნის კოდით: +995 …</li>
+        <li><b>სამუშაო საათები</b> — ყოველ დღეს ცალკე, თბილისის დროით, 24-საათიანი ფორმატით (10:00, 22:00). დასვენების დღე: ჩართეთ „მთელი დღე დაკეტილია“. შუაღამის შემდეგ დაკეტვა არ არის მხარდაჭერილი.</li>
+        <li><b>მისამართი</b>, <b>რუკაზე მდებარეობა</b> (Google Maps-ის ორი რიცხვი), <b>Facebook-ის ბმული</b>.</li>
+      </ul>
+    </div>
+  </div>
+  <h3>საბანკო ანგარიშები </h3>
+  <div class="two">
+    <figure><img src="img/banks.png" alt=""><figcaption>ყოველ ბანკს აქვს გადამრთველი</figcaption></figure>
+    <div>
+      <p>კაფეში გადახდა (ბარათით ან ნაღდით) ყოველთვის შესაძლებელია. <b>ჩართულია</b> გადამრთველით თითოეული ბანკის გადარიცხვა (BOG, TBC) ჩნდება ან ქრება საიტიდან. საიტის ტექსტები ავტომატურად იცვლება.</p>
+      <p>ჩართული ბანკისთვის აუცილებელია სწორი IBAN (<code>GE.. ..</code>) და ანგარიშის მფლობელის სახელი — კლიენტი ხედავს და აკოპირებს მათ.</p>
+    </div>
+  </div>
+  </section>
+
+<section>
+  <h2>5. შენახვის შემდეგ</h2>
+  <ul>
+    <li>საიტი განახლდება დაახლოებით <b>2 წუთში</b>. შეამოწმეთ ტელეფონით (საჭიროების შემთხვევაში გვერდი განაახლეთ).</li>
+    <li>ცვლილებების ისტორია: ზემოთ მარჯვნივ საათის ხატულა (History). ყოველი ცვლილება ჩანს — ვინ და როდის.</li>
+    <li><b>თუ 5 წუთის შემდეგ საიტი არ შეიცვალა:</b> სავარაუდოდ შეცდომაა მონაცემებში (მაგ. აქციის ფასი ფასზე მეტია, ან IBAN არასწორია). საიტზე წინა ვერსია რჩება. გახსენით <b>Admin → Actions</b> Pages CMS-ში ან GitHub-ზე <b>Actions</b> ჩანართი: წითელი ✗ → <b>build</b> → ჟურნალის ბოლოს წერია, რა და სად უნდა გასწორდეს (ინგლისურად). გაასწორეთ და ისევ Save.</li>
+    <li>რამდენიმე ადამიანი ერთდროულად ნუ ცვლის ერთსა და იმავე გვერდს.</li>
+  </ul>
+  <h3>ინგლისური ღილაკები </h3>
+  <p>Pages CMS-ის ღილაკები მხოლოდ ინგლისურადაა:</p>
+  <table>
+    <tr><th>ღილაკი</th><th>მნიშვნელობა</th></tr>
+    <tr><td>Save</td><td>შენახვა და გამოქვეყნება</td></tr>
+    <tr><td>Add an item</td><td>ახლის დამატება სიაში</td></tr>
+    <tr><td>Expand all</td><td>ყველას გახსნა</td></tr>
+    <tr><td>Upload</td><td>ფოტოს ატვირთვა</td></tr>
+    <tr><td>Media</td><td>ყველა ატვირთული ფოტო</td></tr>
+    <tr><td>Required</td><td>სავალდებულო ველი</td></tr>
+    <tr><td>Collaborators / Invite a collaborator</td><td>თანამშრომლები / მოწვევა</td></tr>
+  </table>
+  </section>
+
+<section>
+  <h2>6. ფოტოები და კარგი პრაქტიკა</h2>
+  <ul>
+    <li>ფოტო: ჰორიზონტალური, ნათელი, კერძი ცენტრში. JPG, PNG ან WebP. საიტი თავად ამცირებს ზომას.</li>
+    <li>ერთი ფოტო რამდენიმე კერძისთვის შეიძლება (მაგ. ყველა ხინკალს ერთი ფოტო აქვს).</li>
+    <li>ფასის შეცვლისას ფასი შეცვალეთ საიტზეც და კაფეს მენიუშიც, Google-ზეც.</li>
+    <li>სამუშაო საათები შეინარჩუნეთ ერთნაირი: საიტი, Google Business, Facebook.</li>
+    <li>შეკვეთა მოდის WhatsApp-ზე. დაადასტურეთ კლიენტს WhatsApp-ში — ეს წერია შეკვეთის ტექსტშიც.</li>
+  </ul>
+  </section>
+
+<section>
+  <h2>7. ტექნიკური სპეციალისტისთვის</h2>
+  <p>სტატიკური საიტი <b>Astro 6</b>-ით (Node 22), სერვერისა და მონაცემთა ბაზის გარეშე. ყოველი push-ის შემდეგ <code>main</code>-ზე <code>.github/workflows/deploy.yml</code> აწყობს საიტს და აქვეყნებს <b>GitHub Pages</b>-ზე. რეპოზიტორია: <code>github.com/frossigneux/cafe</code>.</p>
+  <table>
+    <tr><th>ფაილი</th><th>დანიშნულება</th></tr>
+    <tr><td><code>content/menu.json</code>, <code>content/settings.json</code></td><td>კაფის ყველა მონაცემი. აწყობისას მოწმდება (<code>src/data/*.ts</code>); შეცდომისას აწყობა ჩერდება გასაგები შეტყობინებით.</td></tr>
+    <tr><td><code>content/photos/</code></td><td>კერძების და გალერეის ფოტოები, მითითება: <code>/photos/x.jpg</code>.</td></tr>
+    <tr><td><code>.pages.yml</code></td><td>Pages CMS-ის ფორმების აღწერა (ორენოვანი წარწერები).</td></tr>
+    <tr><td><code>content/README.md</code></td><td>JSON-ის პირდაპირ GitHub-ზე რედაქტირების ინსტრუქცია.</td></tr>
+    <tr><td><code>src/i18n.ts</code></td><td>ინტერფეისის ტექსტები (ka / en / ru) და WhatsApp შეტყობინების ტექსტი.</td></tr>
+    <tr><td><code>src/components/OrderPage.astro</code>, <code>src/scripts/order.ts</code>, <code>src/styles/global.css</code></td><td>გვერდი, კალათა, WhatsApp-ის ლოგიკა, სტილები.</td></tr>
+    <tr><td><code>scripts/make-og.py</code></td><td>ქმნის <code>public/og.jpg</code>-ს (გაზიარების სურათი) სახელიდან და გალერეის პირველი სურათიდან.</td></tr>
+    <tr><td><code>docs/guide/</code></td><td>ეს გზამკვლევი (HTML, PDF, სურათები).</td></tr>
+    <tr><td><code>DESIGN.md</code>, <code>PRODUCT.md</code></td><td>დიზაინის სისტემა და პროდუქტის გადაწყვეტილებები.</td></tr>
+  </table>
+  <h3>ლოკალური მუშაობა</h3>
+<pre>git clone git@github.com:frossigneux/cafe.git && cd cafe
+npm ci
+npm run dev      # http://localhost:4321
+npm run build    # იგივე შემოწმება, რაც გამოქვეყნებისას</pre>
+  <p><b>ყოველთვის ჯერ <code>git pull</code>:</b> Pages CMS-ში შეტანილი ცვლილებები commit-ებია <code>main</code>-ზე.</p>
+  <h3>Pages CMS-ის თავისებურებები</h3>
+  <ul>
+    <li>Pages CMS ინახავს მხოლოდ <code>.pages.yml</code>-ში აღწერილ ველებს. ახალი JSON ველი იქაც უნდა დაემატოს, თორემ შემდეგ შენახვისას წაიშლება.</li>
+    <li>ცარიელი ველები ინახება როგორც <code>""</code> ან <code>null</code>; საიტი მათ არარსებულად თვლის.</li>
+    <li><code>.pages.yml</code>-ის შეცვლის შემდეგ შეამოწმეთ ფორმა. თუ ძველი ფორმა ჩანს, გააკეთეთ კიდევ ერთი მცირე ცვლილება <code>.pages.yml</code>-ში (კომენტარი) და push: Pages CMS ქეშს GitHub-ის შეტყობინებით ანახლებს.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>8. დომენი Worldbus.ge-ზე</h2>
+  <p>საიტი ახლა არის <code>frossigneux.github.io/cafe/</code>. საკუთარი .ge დომენი (მაგ. <code>maifamily.ge</code>) შეიძლება დარეგისტრირდეს <b>worldbus.ge</b>-ზე და დაუკავშირდეს GitHub Pages-ს.</p>
+  <ol>
+    <li>დაარეგისტრირეთ დომენი <b>worldbus.ge</b>-ზე (Domains). ანგარიშის ელფოსტა: <span class="blank"></span>. განაახლეთ ყოველწლიურად, თორემ მისამართი აღარ იმუშავებს.</li>
+    <li>Worldbus-ის DNS პანელში (სტანდარტული სერვერები <code>ns1.worldbus.ge</code> / <code>ns2.worldbus.ge</code>) შექმენით:
+<pre>@    A      185.199.108.153
+@    A      185.199.109.153
+@    A      185.199.110.153
+@    A      185.199.111.153
+www  CNAME  frossigneux.github.io.</pre></li>
+    <li>GitHub-ზე: რეპოზიტორია <b>Settings → Pages → Custom domain</b>, შეიყვანეთ დომენი, შეინახეთ, დაელოდეთ DNS შემოწმებას და ჩართეთ <b>Enforce HTTPS</b>. <code>CNAME</code> ფაილი საჭირო არ არის.</li>
+    <li>ხელახლა გაუშვით გამოქვეყნება (Actions → Publish site → Run workflow). საიტი მისამართს GitHub Pages-იდან იღებს, ამიტომ ბმულები, sitemap და გაზიარების ტეგები ახალ დომენზე გადავა და <code>/cafe/</code> თავისით გაქრება.</li>
+    <li>განაახლეთ ბმული Google Business-ზე, Facebook-ზე და ბეჭდურ მასალაზე.</li>
+  </ol>
+  <p>ალტერნატიული ჰოსტინგი (პრივატული რეპოზიტორია, Cloudflare Pages) აღწერილია რეპოზიტორიის <code>README.md</code>-ში.</p>
+</section>
+
+<section>
+  <h2>9. Google Business Profile</h2>
+  <p>Google Business Profile-ით კაფე ჩანს Google Maps-ზე და ძიებაში: საათები, ფოტოები, ტელეფონი, საიტის ბმული, შეფასებები. უფასოა.</p>
+  <ol>
+    <li>გახსენით <b>business.google.com</b> კაფის Google ანგარიშით (არა პირადით). ანგარიში: <span class="blank"></span></li>
+    <li>სახელი: <b>მაი & Family</b>; კატეგორია: Café (დამატებით Pizza restaurant); მისამართი: სოფ. ნატახტარი, რუკაზე ზუსტი წერტილი.</li>
+    <li>ტელეფონი +995 593 62 80 90, საიტი (იხ. 1-ლი გვერდი), სამუშაო საათები — იგივე, რაც საიტზე.</li>
+    <li>დადასტურება: Google სთავაზობს ვიდეოს, ზარს ან წერილს. მიჰყევით ინსტრუქციას.</li>
+    <li>დაამატეთ ფოტოები (ფასადი, დარბაზი, კერძები) და დამატებითი მენეჯერები (Settings → People and access), რომ წვდომა მხოლოდ ერთ ადამიანზე არ იყოს დამოკიდებული.</li>
+    <li>საიტი უკვე აქვეყნებს სტრუქტურირებულ მონაცემებს (JSON-LD: სახელი, მისამართი, კოორდინატები, საათები, Facebook), რაც Google-ს ეხმარება.</li>
+  </ol>
+  </section>
+
+
+</body>
+</html>
