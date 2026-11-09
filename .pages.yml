@@ -1,4 +1,5 @@
-# Pages CMS (https://app.pagescms.org): forms for content/menu.json and content/settings.json.
+# Pages CMS (https://app.pagescms.org): forms for content/menu.json and content/settings.json,
+# labelled in Georgian and English.
 # Every save is a commit on main, which republishes the site. A mistake stops the
 # publish and the live site keeps its previous version (see content/README.md).
 
