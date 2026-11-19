@@ -758,6 +758,24 @@ svg.brand {
   font-weight: 500;
 }
 
+/* Staff link to Pages CMS: present but near-invisible to customers. */
+.foot {
+  margin-top: var(--sp-6);
+  text-align: right;
+}
+
+.admin {
+  font-size: 0.6875rem;
+  color: var(--line-strong);
+  text-decoration: none;
+}
+
+.admin:hover,
+.admin:focus-visible {
+  color: var(--ink-2);
+  text-decoration: underline;
+}
+
 .hours {
   border-collapse: collapse;
   font-weight: 400;

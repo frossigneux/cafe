@@ -321,6 +321,13 @@ const icon = {
             </div>
           </dl>
         </section>
+        {
+          config.adminUrl && (
+            <footer class="foot">
+              <a class="admin" href={config.adminUrl} target="_blank" rel="noopener nofollow">{t(lang, 'admin')}</a>
+            </footer>
+          )
+        }
       </main>
 
       <dialog class="zoom" data-zoom-dialog aria-labelledby="zoom-name">

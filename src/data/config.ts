@@ -1,3 +1,4 @@
+import { execSync } from 'node:child_process';
 import raw from '../../content/settings.json';
 import { blank, blankText, check, photoFile, text, type Text } from './validate';
 
@@ -58,6 +59,24 @@ check(
   '"location" must look like { "lat": 41.91935, "lng": 44.727734 } (numbers, no quotes), or be removed',
 );
 
+// "owner/repo" of the GitHub repository this site is built from: given by GitHub Actions,
+// read from the origin remote in a local build. Used for the discreet admin link
+// (Pages CMS); no repository found means no link.
+const repo = ((): string | null => {
+  let r = process.env.GITHUB_REPOSITORY ?? '';
+  if (!r) {
+    try {
+      r = execSync('git remote get-url origin', { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] })
+        .trim()
+        .replace(/^.*github\.com[:/]/, '')
+        .replace(/\.git$/, '');
+    } catch {
+      r = '';
+    }
+  }
+  return /^[\w.-]+\/[\w.-]+$/.test(r) ? r : null;
+})();
+
 export const config = {
   name: s.name.trim() as string,
   // File names in content/photos/; empty means no picture at the top.
@@ -72,6 +91,7 @@ export const config = {
   // As written in settings, for display ("+995 593 62 80 90").
   phoneDisplay: String(s.whatsapp).trim(),
   facebook: blank(s.facebook) ? null : (s.facebook as string),
+  adminUrl: repo ? `https://app.pagescms.org/${repo}` : null,
   mapUrl: loc ? `https://www.google.com/maps/search/?api=1&query=${loc.lat},${loc.lng}` : null,
   // Only the banks switched on, BOG first.
   banks: Object.fromEntries(
