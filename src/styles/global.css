@@ -761,7 +761,7 @@ svg.brand {
 /* Staff link to Pages CMS: present but near-invisible to customers. */
 .foot {
   margin-top: var(--sp-6);
-  text-align: right;
+  text-align: center;
 }
 
 .admin {
